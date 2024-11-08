@@ -6,7 +6,7 @@ from azure.storage.blob import BlobClient
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Constants
-CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial4;SharedAccessKey=lfD4pDqXOsbz329xeCUG745ojlbLHn5EGXMVi6wMDUQ="
+CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial2;SharedAccessKey=ZIzS38C3pnhtudEMoadfX5q/MOz/wVQaArjcF+sZtJQ="
 DATA_FOLDER = "./data"
 MAX_CONCURRENT_UPLOADS = 5
 
