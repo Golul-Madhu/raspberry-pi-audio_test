@@ -3,7 +3,7 @@ import time
 import subprocess
 import threading
 
-# GPIO setup
+# GPIO setup TESTING 1
 TOUCH_PIN = 17
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(TOUCH_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # Use pull-down to stabilize input
