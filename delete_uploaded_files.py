@@ -2,11 +2,14 @@ import os
 import time
 import sqlite3
 import datetime
+DATABASE_PATH = "/home/pr/TEST/tracking.db"
+
+
 
 def delete_old_uploaded_files():
     while True:
         current_time = datetime.datetime.now()
-        connection = sqlite3.connect('tracking.db')
+        connection = sqlite3.connect(DATABASE_PATH)
         cursor = connection.cursor()
         cursor.execute('SELECT file_path, timestamp FROM files WHERE status = "uploaded"')
         uploaded_files = cursor.fetchall()
