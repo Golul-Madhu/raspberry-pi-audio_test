@@ -1,7 +1,10 @@
 import sqlite3
+DATABASE_PATH = "/home/pr/TEST/tracking.db"
+
+
 
 def setup_database():
-    connection = sqlite3.connect('tracking.db')
+    connection = sqlite3.connect(DATABASE_PATH)
     cursor = connection.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS files (
