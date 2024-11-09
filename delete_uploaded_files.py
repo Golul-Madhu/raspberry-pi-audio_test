@@ -1,28 +1,24 @@
 import os
-import datetime
 import time
-import shutil
+import sqlite3
+import datetime
 
-DATA_FOLDER = "./data"
+def delete_old_uploaded_files():
+    while True:
+        current_time = datetime.datetime.now()
+        connection = sqlite3.connect('tracking.db')
+        cursor = connection.cursor()
+        cursor.execute('SELECT file_path, timestamp FROM files WHERE status = "uploaded"')
+        uploaded_files = cursor.fetchall()
+        
+        for file_path, timestamp in uploaded_files:
+            file_time = datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')
+            if (current_time - file_time).days >= 1:
+                if os.path.exists(file_path):
+                    os.remove(file_path)
+                    print(f"Deleted file: {file_path}")
 
-def get_old_uploaded_folders():
-    current_date = datetime.datetime.now().strftime('%Y-%m-%d')
-    old_folders = []
-    for folder_name in os.listdir(DATA_FOLDER):
-        folder_path = os.path.join(DATA_FOLDER, folder_name)
-        if os.path.isdir(folder_path) and folder_name != current_date:
-            uploaded_folder = os.path.join(folder_path, "Uploaded")
-            if os.path.isdir(uploaded_folder):
-                old_folders.append(uploaded_folder)
-    return old_folders
-
-def delete_folder(folder_path):
-    shutil.rmtree(folder_path)
-    print(f"Deleted folder: {folder_path}")
+        time.sleep(3600)  # Run the deletion check every hour
 
 if __name__ == "__main__":
-    while True:
-        old_folders = get_old_uploaded_folders()
-        for folder_path in old_folders:
-            delete_folder(folder_path)
-        time.sleep(3600)  # Run every hour
+    delete_old_uploaded_files()
