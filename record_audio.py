@@ -10,7 +10,7 @@ SAMP_RATE = 48000
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RECORD_DURATION = 10  # seconds
-DATA_FOLDER = "./data"
+DATA_FOLDER = "/home/pr/TEST/data"
 
 def save_audio_buffer(buffer, start_time):
     # Create a local instance of pyaudio
