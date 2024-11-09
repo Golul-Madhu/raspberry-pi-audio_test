@@ -1,0 +1,18 @@
+import sqlite3
+
+def setup_database():
+    connection = sqlite3.connect('tracking.db')
+    cursor = connection.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS files (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            file_path TEXT NOT NULL,
+            status TEXT NOT NULL,
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+    connection.commit()
+    connection.close()
+
+# Run this function to create the table initially
+setup_database()
