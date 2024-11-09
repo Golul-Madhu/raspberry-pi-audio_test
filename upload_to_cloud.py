@@ -3,6 +3,8 @@ import time
 import sqlite3
 from azure.iot.device import IoTHubDeviceClient
 from azure.storage.blob import BlobClient
+DATABASE_PATH = "/home/pr/TEST/tracking.db"
+
 
 # Connection string for Azure IoT
 CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial2;SharedAccessKey=ZIzS38C3pnhtudEMoadfX5q/MOz/wVQaArjcF+sZtJQ="
@@ -28,7 +30,7 @@ def upload_file(file_path):
         print(f"Upload successful for {file_path} as {blob_name}")
 
         # Update the database to mark the file as uploaded
-        connection = sqlite3.connect('tracking.db')
+        connection = sqlite3.connect(DATABASE_PATH)
         cursor = connection.cursor()
         cursor.execute('UPDATE files SET status = ? WHERE file_path = ?', ('uploaded', file_path))
         connection.commit()
@@ -39,7 +41,7 @@ def upload_file(file_path):
 
 def upload_worker():
     while True:
-        connection = sqlite3.connect('tracking.db')
+        connection = sqlite3.connect(DATABASE_PATH)
         cursor = connection.cursor()
         cursor.execute('SELECT file_path FROM files WHERE status = "to_upload"')
         files_to_upload = cursor.fetchall()
