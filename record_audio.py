@@ -4,6 +4,8 @@ import os
 import datetime
 import threading
 import sqlite3
+DATABASE_PATH = "/home/pr/TEST/tracking.db"
+
 
 CHUNK = 48000
 SAMP_RATE = 48000
@@ -32,7 +34,7 @@ def save_audio_buffer(buffer, start_time):
     audio.terminate()
 
     # Insert file path into database for upload tracking
-    connection = sqlite3.connect('tracking.db')
+    connection = sqlite3.connect(DATABASE_PATH)
     cursor = connection.cursor()
     cursor.execute('INSERT INTO files (file_path, status) VALUES (?, ?)', (file_path, 'to_upload'))
     connection.commit()
