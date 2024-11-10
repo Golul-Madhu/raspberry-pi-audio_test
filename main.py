@@ -2,6 +2,8 @@ import os
 import time
 import subprocess
 import pyaudio
+import sounddevice as sd
+import numpy as np
 import wave
 import datetime
 import sqlite3
@@ -10,9 +12,11 @@ import pytz
 import threading
 from azure.iot.device import IoTHubDeviceClient
 from azure.storage.blob import BlobClient
+os.environ["PYTHONWARNINGS"] = "ignore::DeprecationWarning"
+os.environ["ALSA_CONFIG_PATH"] = "/dev/null"  # Suppresses ALSA config warnings
 
 # Configuration for Azure IoT
-CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=ESP32C6_INMP441;SharedAccessKey=LzQLb2rlspLU4hzMep7zw/bJObpsS2K7LAIoTH/cxMA="
+CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial3;SharedAccessKey=wQHn1r6H6pp5CaUwcx6YXVlYVLG9DPPbEiVMIz6FOP8="
 
 # Audio Recording Parameters
 CHUNK = 48000
@@ -21,7 +25,8 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RECORD_DURATION = 10  # Duration of each recording segment in seconds
 DATA_FOLDER = "/home/pi/data"
-DEVICE_ID = CONNECTION_STRING.split("DeviceId=")[1].split(";")[0]"
+DEVICE_ID = CONNECTION_STRING.split("DeviceId=")[1].split(";")[0]
+
 
 # Network Configuration
 PING_IP = "8.8.8.8"  # IP address to check for internet connectivity
@@ -31,6 +36,7 @@ wifi_route = None  # Global variable for the WiFi route
 
 # Initialize Azure IoT client
 device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING, websockets=True)
+print("Starting main.py")
 
 def get_timezone_from_ip():
     """Fetch timezone based on device's IP address."""
@@ -89,6 +95,7 @@ def monitor_network():
 
 def save_audio(buffer, start_time, timezone_str):
     """Save the recorded audio buffer to a WAV file with local time in filename."""
+    audio = pyaudio.PyAudio()
     local_start_time = convert_to_local_time(start_time, timezone_str)
     date_folder = os.path.join(DATA_FOLDER, DEVICE_ID, local_start_time.strftime('%Y-%m-%d'))
     os.makedirs(date_folder, exist_ok=True)
@@ -110,25 +117,27 @@ def save_audio(buffer, start_time, timezone_str):
         conn.commit()
     
     print(f"Saved audio file: {file_path}")
+    audio.terminate()
 
 def record_audio():
     """Continuously record audio in 10-second segments and save locally."""
-    audio = pyaudio.PyAudio()
-    stream = audio.open(format=FORMAT, rate=SAMP_RATE, channels=CHANNELS, input=True, frames_per_buffer=CHUNK)
-
-    buffer1, buffer2 = [], []
-    active_buffer = buffer1
     timezone_str = get_timezone_from_ip() or "UTC"
-
+    
     print("Continuous recording started.")
     while True:
         start_time = datetime.datetime.now(datetime.timezone.utc)
-        active_buffer.clear()
-        for _ in range(0, int(SAMP_RATE / CHUNK * RECORD_DURATION)):
-            active_buffer.append(stream.read(CHUNK, exception_on_overflow=False))
+        
+        # Record audio for the specified duration
+        print("Recording segment...")
+        audio_data = sd.rec(int(SAMP_RATE * RECORD_DURATION), samplerate=SAMP_RATE, channels=CHANNELS, dtype='int32')
+        sd.wait()  # Wait until recording is finished
+        print("Segment recording complete.")
+        
+        # Convert audio data to a byte buffer for saving
+        buffer = audio_data.flatten().tobytes()
 
         # Save the recorded segment
-        save_audio(list(active_buffer), start_time, timezone_str)
+        save_audio([buffer], start_time, timezone_str)
 
 def upload_to_cloud():
     """Upload files marked as 'to_upload' to Azure IoT and update status in database."""
@@ -186,16 +195,22 @@ def check_for_updates():
     """Check for updates on GitHub, pull changes if available, and restart the script."""
     REPO_PATH = "/home/pi/raspberry-pi-audio_test"
     while True:
-        os.chdir(REPO_PATH)
-        subprocess.run(["git", "fetch", "origin"])
-        local_commit = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip()
-        remote_commit = subprocess.check_output(["git", "rev-parse", "origin/main"]).strip()
-        
-        if local_commit != remote_commit:
-            print("New update detected. Pulling changes and restarting...")
-            subprocess.run(["git", "reset", "--hard", "origin/main"])
-            os.execv(__file__, ["python3"] + sys.argv)
-        
+        try:
+            os.chdir(REPO_PATH)
+            subprocess.run(["git", "fetch", "origin"])
+            local_commit = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip()
+            remote_commit = subprocess.check_output(["git", "rev-parse", "origin/main"]).strip()
+
+            if local_commit != remote_commit:
+                print("New update detected. Pulling changes and restarting...")
+                subprocess.run(["git", "reset", "--hard", "origin/main"])
+                
+                # Restart the script
+                os.execv(sys.executable, ["python3"] + sys.argv)
+
+        except Exception as e:
+            print(f"Error in check_for_updates: {e}")
+
         time.sleep(3600)  # Check for updates every hour
 
 if __name__ == "__main__":
@@ -206,3 +221,4 @@ if __name__ == "__main__":
     threading.Thread(target=delete_uploaded_files, daemon=True).start()
     threading.Thread(target=monitor_network, daemon=True).start()
     threading.Thread(target=check_for_updates, daemon=True).start()
+
