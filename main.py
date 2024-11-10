@@ -21,7 +21,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RECORD_DURATION = 10  # Duration of each recording segment in seconds
 DATA_FOLDER = "/home/pi/data"
-DEVICE_ID = "ESP32C6_INMP441"
+DEVICE_ID = CONNECTION_STRING.split("DeviceId=")[1].split(";")[0]"
 
 # Network Configuration
 PING_IP = "8.8.8.8"  # IP address to check for internet connectivity
