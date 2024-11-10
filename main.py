@@ -34,8 +34,13 @@ WIFI_METRIC = 600
 PPP_METRIC = 700
 wifi_route = None  # Global variable for the WiFi route
 
-# Initialize Azure IoT client
-device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING, websockets=True)
+# Initialize Azure IoT client with error handling
+try:
+    device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING, websockets=True)
+    print("Azure IoT client initialized.")
+except Exception as e:
+    print(f"Failed to initialize IoT client: {e}")
+
 print("Starting main.py")
 
 def get_timezone_from_ip():
@@ -43,13 +48,12 @@ def get_timezone_from_ip():
     try:
         response = requests.get("https://ipapi.co/timezone")
         if response.status_code == 200:
-            timezone = response.text.strip()
-            return timezone
+            return response.text.strip()
         else:
             print(f"Failed to get timezone: {response.status_code}")
     except Exception as e:
         print(f"Error fetching timezone: {e}")
-    return None
+    return "UTC"
 
 def convert_to_local_time(utc_time, timezone_str):
     """Convert UTC timestamp to local time based on detected timezone."""
@@ -121,23 +125,22 @@ def save_audio(buffer, start_time, timezone_str):
 
 def record_audio():
     """Continuously record audio in 10-second segments and save locally."""
-    timezone_str = get_timezone_from_ip() or "UTC"
+    timezone_str = get_timezone_from_ip()
     
     print("Continuous recording started.")
     while True:
         start_time = datetime.datetime.now(datetime.timezone.utc)
-        
-        # Record audio for the specified duration
-        print("Recording segment...")
-        audio_data = sd.rec(int(SAMP_RATE * RECORD_DURATION), samplerate=SAMP_RATE, channels=CHANNELS, dtype='int32')
-        sd.wait()  # Wait until recording is finished
-        print("Segment recording complete.")
-        
-        # Convert audio data to a byte buffer for saving
-        buffer = audio_data.flatten().tobytes()
-
-        # Save the recorded segment
-        save_audio([buffer], start_time, timezone_str)
+        try:
+            print("Recording segment...")
+            audio_data = sd.rec(int(SAMP_RATE * RECORD_DURATION), samplerate=SAMP_RATE, channels=CHANNELS, dtype='int32')
+            sd.wait()  # Wait until recording is finished
+            print("Segment recording complete.")
+            
+            buffer = audio_data.flatten().tobytes()
+            save_audio([buffer], start_time, timezone_str)
+        except Exception as e:
+            print(f"Error during recording: {e}")
+            
 
 def upload_to_cloud():
     """Upload files marked as 'to_upload' to Azure IoT and update status in database."""
@@ -204,14 +207,10 @@ def check_for_updates():
             if local_commit != remote_commit:
                 print("New update detected. Pulling changes and restarting...")
                 subprocess.run(["git", "reset", "--hard", "origin/main"])
-                
-                # Restart the script
                 os.execv(sys.executable, ["python3"] + sys.argv)
-
         except Exception as e:
             print(f"Error in check_for_updates: {e}")
-
-        time.sleep(3600)  # Check for updates every hour
+        time.sleep(3600)
 
 if __name__ == "__main__":
     setup_database()
@@ -221,4 +220,7 @@ if __name__ == "__main__":
     threading.Thread(target=delete_uploaded_files, daemon=True).start()
     threading.Thread(target=monitor_network, daemon=True).start()
     threading.Thread(target=check_for_updates, daemon=True).start()
-
+    
+    # Keep the main thread alive
+    while True:
+        time.sleep(1)
