@@ -26,6 +26,10 @@ CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial2;SharedAc
 device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING, websockets=True)
 device_id = CONNECTION_STRING.split("DeviceId=")[1].split(";")[0]
 
+# Global flag and timer variable for touch control
+waiting_to_restart = False
+restart_timer = None
+
 # Setup Database
 def setup_database():
     connection = sqlite3.connect(DATABASE_PATH)
@@ -48,7 +52,7 @@ def save_audio_buffer(buffer, start_time, end_time):
     audio = pyaudio.PyAudio()
     date_folder = start_time.strftime('%Y-%m-%d')
     os.makedirs(os.path.join(DATA_FOLDER, date_folder), exist_ok=True)
-    file_name = f"{start_time.strftime('%Y-%m-%d_%H-%M-%S')}_to_{end_time.strftime('%H-%M-%S')}.wav"
+    file_name = f"{device_id}_from_{start_time.strftime('%Y-%m-%d_%H-%M-%S')}_to_{end_time.strftime('%H-%M-%S')}.wav"
     file_path = os.path.join(DATA_FOLDER, date_folder, file_name)
 
     with wave.open(file_path, 'wb') as wf:
@@ -115,20 +119,34 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(TOUCH_PIN, GPIO.IN)
 
 def start_recording_service():
+    global waiting_to_restart, restart_timer
+    if restart_timer:
+        restart_timer.cancel()
+        restart_timer = None
+    waiting_to_restart = False
     subprocess.run(["sudo", "systemctl", "start", RECORDING_SERVICE])
+    print("Recording service started immediately due to 3-second touch.")
 
 def stop_recording_service():
+    global waiting_to_restart, restart_timer
     subprocess.run(["sudo", "systemctl", "stop", RECORDING_SERVICE])
-    time.sleep(3600)
-    start_recording_service()
+    print("Recording service stopped. Will restart after 1 hour if not manually started.")
+    waiting_to_restart = True
+    # Set up a timer to automatically restart after 1 hour
+    restart_timer = threading.Timer(3600, start_recording_service)
+    restart_timer.start()
 
 def monitor_touch():
     try:
         while True:
             if GPIO.input(TOUCH_PIN) == GPIO.HIGH:
-                time.sleep(3)
+                time.sleep(3)  # Confirm a long press
                 if GPIO.input(TOUCH_PIN) == GPIO.HIGH:
-                    if subprocess.run(["systemctl", "is-active", "--quiet", RECORDING_SERVICE]).returncode == 0:
+                    # Toggle recording service based on its current status
+                    if waiting_to_restart:
+                        # If in waiting period, start immediately
+                        start_recording_service()
+                    elif subprocess.run(["systemctl", "is-active", "--quiet", RECORDING_SERVICE]).returncode == 0:
                         stop_recording_service()
                     else:
                         start_recording_service()
@@ -140,7 +158,7 @@ def monitor_touch():
 # Upload to Cloud
 def upload_file(file_path):
     try:
-        blob_name = f"{device_id}_{os.path.basename(file_path)}"
+        blob_name = f"{os.path.relpath(file_path, DATA_FOLDER).replace(os.sep, '/')}"
         blob_info = device_client.get_storage_info_for_blob(blob_name)
         sas_url = f"https://{blob_info['hostName']}/{blob_info['containerName']}/{blob_info['blobName']}{blob_info['sasToken']}"
         with BlobClient.from_blob_url(sas_url) as blob_client, open(file_path, "rb") as file:
@@ -161,7 +179,6 @@ def upload_worker():
         for root, _, files in os.walk(DATA_FOLDER):
             for filename in files:
                 file_path = os.path.join(root, filename)
-                # Check if the file is already marked as uploaded in the database
                 connection = sqlite3.connect(DATABASE_PATH)
                 cursor = connection.cursor()
                 cursor.execute('SELECT status FROM files WHERE file_path = ?', (file_path,))
@@ -201,4 +218,3 @@ if __name__ == "__main__":
     set_local_time()
     while True:
         time.sleep(1)
-
