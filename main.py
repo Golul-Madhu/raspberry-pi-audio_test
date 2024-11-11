@@ -12,7 +12,7 @@ import pytz
 from azure.iot.device import IoTHubDeviceClient
 from azure.storage.blob import BlobClient
 
-# Constants
+# Constants TESTING
 DATABASE_PATH = "/home/pi/tracking.db"
 DATA_FOLDER = "/home/pi/data"
 CHUNK = 48000
