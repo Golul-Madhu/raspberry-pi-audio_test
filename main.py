@@ -175,18 +175,24 @@ def upload_file(file_path):
 
 def upload_worker():
     while True:
-        # Scan the DATA_FOLDER for unprocessed files
-        for root, _, files in os.walk(DATA_FOLDER):
-            for filename in files:
-                file_path = os.path.join(root, filename)
+        # Connect to the database and fetch files in order of their timestamps (FIFO)
+        connection = sqlite3.connect(DATABASE_PATH)
+        cursor = connection.cursor()
+        cursor.execute('SELECT file_path FROM files WHERE status = "to_upload" ORDER BY timestamp ASC')
+        files_to_upload = cursor.fetchall()
+        connection.close()
+
+        # Attempt to upload each file in the order it was saved
+        for (file_path,) in files_to_upload:
+            if upload_file(file_path):  # If upload is successful
+                # Mark the file as uploaded in the database
                 connection = sqlite3.connect(DATABASE_PATH)
                 cursor = connection.cursor()
-                cursor.execute('SELECT status FROM files WHERE file_path = ?', (file_path,))
-                result = cursor.fetchone()
+                cursor.execute('UPDATE files SET status = ? WHERE file_path = ?', ('uploaded', file_path))
+                connection.commit()
                 connection.close()
 
-                if not result or result[0] == 'to_upload':  # If not uploaded or marked for upload
-                    upload_file(file_path)
+        # Wait before checking for new files
         time.sleep(10)
 
 # Set Timezone from Network
