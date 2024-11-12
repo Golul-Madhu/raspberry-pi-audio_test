@@ -22,7 +22,7 @@ CHANNELS = 1
 RECORD_DURATION = 10  # seconds
 TOUCH_PIN = 17
 RECORDING_SERVICE = "record_audio.service"
-CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=ESP32C6_INMP441;SharedAccessKey=LzQLb2rlspLU4hzMep7zw/bJObpsS2K7LAIoTH/cxMA="
+CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial4;SharedAccessKey=lfD4pDqXOsbz329xeCUG745ojlbLHn5EGXMVi6wMDUQ="
 device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING, websockets=True)
 device_id = CONNECTION_STRING.split("DeviceId=")[1].split(";")[0]
 
