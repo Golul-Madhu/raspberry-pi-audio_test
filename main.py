@@ -13,7 +13,7 @@ import pytz
 from azure.iot.device import IoTHubDeviceClient
 from azure.storage.blob import BlobClient
 
-# Constants 1
+# Constants
 DATABASE_PATH = "/home/pi/tracking.db"
 DATA_FOLDER = "/home/pi/data"
 CHUNK = 48000
@@ -64,7 +64,7 @@ def db_worker():
                 cursor.execute('UPDATE files SET status = ? WHERE file_path = ?', data)
             connection.commit()
         except sqlite3.OperationalError as e:
-            print(f"Database operation error: {e}. Retrying...")
+            print(datetime.datetime.now(),f"Database operation error: {e}. Retrying...")
             time.sleep(0.5)  # Wait briefly and retry on error
             db_queue.put((operation, data))  # Re-queue operation for retry
         finally:
@@ -96,7 +96,7 @@ def save_audio_buffer(buffer, start_time, end_time):
         wf.setframerate(SAMP_RATE)
         wf.writeframes(b''.join(buffer))
 
-    print(f"Saved audio file: {file_path}")
+    print(datetime.datetime.now(),f"Saved audio file: {file_path}")
     audio.terminate()
 
     # Queue insert operation
@@ -108,7 +108,7 @@ def record_audio_continuously():
     buffer1, buffer2 = [], []
     active_buffer = buffer1
 
-    print("Continuous recording started.")
+    print(datetime.datetime.now(),"Continuous recording started.")
     try:
         while True:
             start_time = datetime.datetime.now()
@@ -120,7 +120,7 @@ def record_audio_continuously():
             threading.Thread(target=save_audio_buffer, args=(active_buffer, start_time, end_time), daemon=True).start()
             active_buffer = buffer2 if active_buffer is buffer1 else buffer1
     except KeyboardInterrupt:
-        print("Recording stopped by user.")
+        print(datetime.datetime.now(),"Recording stopped by user.")
     finally:
         stream.stop_stream()
         stream.close()
@@ -141,7 +141,7 @@ def delete_old_uploaded_files():
             if (current_time - file_time).days >= 1:
                 if os.path.exists(file_path):
                     os.remove(file_path)
-                    print(f"Deleted file: {file_path}")
+                    print(datetime.datetime.now(),f"Deleted file: {file_path}")
 
         time.sleep(3600)
 
@@ -156,12 +156,12 @@ def start_recording_service():
         restart_timer = None
     waiting_to_restart = False
     subprocess.run(["sudo", "systemctl", "start", RECORDING_SERVICE])
-    print("Recording service started immediately due to 3-second touch.")
+    print(datetime.datetime.now(),"Recording service started immediately due to 3-second touch.")
 
 def stop_recording_service():
     global waiting_to_restart, restart_timer
     subprocess.run(["sudo", "systemctl", "stop", RECORDING_SERVICE])
-    print("Recording service stopped. Will restart after 1 hour if not manually started.")
+    print(datetime.datetime.now(),"Recording service stopped. Will restart after 1 hour if not manually started.")
     waiting_to_restart = True
     restart_timer = threading.Timer(3600, start_recording_service)
     restart_timer.start()
@@ -179,7 +179,7 @@ def monitor_touch():
                     else:
                         start_recording_service()
     except KeyboardInterrupt:
-        print("Touch control exited.")
+        print(datetime.datetime.now(),"Touch control exited.")
     finally:
         GPIO.cleanup()
 
@@ -192,10 +192,10 @@ def upload_file(file_path):
         with BlobClient.from_blob_url(sas_url) as blob_client, open(file_path, "rb") as file:
             blob_client.upload_blob(file, overwrite=True)
         device_client.notify_blob_upload_status(blob_info["correlationId"], True, 200, "Upload successful.")
-        print(f"Upload successful for {file_path}")
+        print(datetime.datetime.now(),f"Upload successful for {file_path}")
         queue_update_file_status(file_path, 'uploaded')
     except Exception as e:
-        print(f"Failed to upload {file_path}: {e}")
+        print(datetime.datetime.now(),f"Failed to upload {file_path}: {e}")
 
 def upload_worker():
     while True:
@@ -219,9 +219,9 @@ def get_timezone_from_ip():
             data = response.json()
             return data.get("timezone")
         else:
-            print(f"Failed to get timezone. Status code: {response.status_code}, Response: {response.text}")
+            print(datetime.datetime.now(),f"Failed to get timezone. Status code: {response.status_code}, Response: {response.text}")
     except Exception as e:
-        print(f"Error fetching timezone: {e}")
+        print(datetime.datetime.now(),f"Error fetching timezone: {e}")
     return None
 
 def set_local_time():
@@ -232,9 +232,45 @@ def set_local_time():
         # Define the local timezone and convert the time
         local_tz = pytz.timezone(timezone_str)
         local_time = utc_timestamp.astimezone(local_tz)
-        print(f"Local Time in {timezone_str}: {local_time}")
+        print(datetime.datetime.now(),f"Local Time in {timezone_str}: {local_time}")
     else:
-        print("Could not retrieve timezone. UTC time:", utc_timestamp)
+        print(datetime.datetime.now(),"Could not retrieve timezone. UTC time:", utc_timestamp)
+
+
+def rotate_and_upload_log():
+    if os.path.exists(LOG_FILE_PATH):
+        # Rename log file for archival
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        rotated_log_file = os.path.join(LOG_ARCHIVE_PATH, f"{device_id}_main_log_{timestamp}.log")
+        os.rename(LOG_FILE_PATH, rotated_log_file)
+
+        # Create a new empty log file
+        open(LOG_FILE_PATH, 'w').close()
+
+        # Upload the rotated log file to Azure
+        upload_log_file(rotated_log_file)
+
+        # Delete the rotated log file after successful upload
+        os.remove(rotated_log_file)
+
+# Function to upload a single log file to Azure
+def upload_log_file(file_path):
+    if os.path.exists(file_path):
+        try:
+            blob_name = f"{os.path.basename(file_path)}"
+            blob_info = device_client.get_storage_info_for_blob(blob_name)
+            sas_url = f"https://{blob_info['hostName']}/{blob_info['containerName']}/{blob_info['blobName']}{blob_info['sasToken']}"
+            with BlobClient.from_blob_url(sas_url) as blob_client, open(file_path, "rb") as file:
+                blob_client.upload_blob(file, overwrite=True)
+            print(datetime.datetime.now(),f"Log file uploaded as {blob_name}")
+        except Exception as e:
+            print(datetime.datetime.now(),f"Failed to upload log file: {e}")
+
+# Schedule log rotation and upload every hour
+def schedule_log_rotation():
+    while True:
+        time.sleep(3600)  # Rotate and upload every hour
+        rotate_and_upload_log()
 
 # Main Program Threads
 if __name__ == "__main__":
@@ -242,6 +278,9 @@ if __name__ == "__main__":
     threading.Thread(target=delete_old_uploaded_files, daemon=True).start()
     threading.Thread(target=monitor_touch, daemon=True).start()
     threading.Thread(target=upload_worker, daemon=True).start()
+    threading.Thread(target=schedule_log_rotation, daemon=True).start()
+    
     set_local_time()
     while True:
         time.sleep(1)
+
