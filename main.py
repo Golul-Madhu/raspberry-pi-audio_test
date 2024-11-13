@@ -3,6 +3,7 @@ import time
 import threading
 import datetime
 import sqlite3
+import queue
 import pyaudio
 import wave
 import RPi.GPIO as GPIO
@@ -12,7 +13,7 @@ import pytz
 from azure.iot.device import IoTHubDeviceClient
 from azure.storage.blob import BlobClient
 
-# Constants TESTING 1
+# Constants 1
 DATABASE_PATH = "/home/pi/tracking.db"
 DATA_FOLDER = "/home/pi/data"
 CHUNK = 48000
@@ -22,17 +23,20 @@ CHANNELS = 1
 RECORD_DURATION = 10  # seconds
 TOUCH_PIN = 17
 RECORDING_SERVICE = "record_audio.service"
-CONNECTION_STRING = "HostName=PRESAGE.azure-devices.net;DeviceId=trial4;SharedAccessKey=lfD4pDqXOsbz329xeCUG745ojlbLHn5EGXMVi6wMDUQ="
+CONNECTION_STRING = "HostName=PRESAGE-IOT-DEV.azure-devices.net;DeviceId=TestDEV01_PRESAGE;SharedAccessKey=qkztrQHEMOiZSnNiOFEa8H3U7M27gZ+P031Y7DhX57Q="
 device_client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING, websockets=True)
 device_id = CONNECTION_STRING.split("DeviceId=")[1].split(";")[0]
 
-# Global flag and timer variable for touch control
+# Global flags for touch control
 waiting_to_restart = False
 restart_timer = None
 
+# Database operation queue and worker
+db_queue = queue.Queue()
+
 # Setup Database
 def setup_database():
-    connection = sqlite3.connect(DATABASE_PATH)
+    connection = sqlite3.connect(DATABASE_PATH, timeout=10)
     cursor = connection.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS files (
@@ -46,6 +50,37 @@ def setup_database():
     connection.close()
 
 setup_database()
+
+# Database worker thread to handle all DB operations
+def db_worker():
+    connection = sqlite3.connect(DATABASE_PATH, timeout=10)  # Set timeout to handle potential locks
+    cursor = connection.cursor()
+    while True:
+        operation, data = db_queue.get()
+        try:
+            if operation == "insert":
+                cursor.execute('INSERT INTO files (file_path, status) VALUES (?, ?)', data)
+            elif operation == "update":
+                cursor.execute('UPDATE files SET status = ? WHERE file_path = ?', data)
+            connection.commit()
+        except sqlite3.OperationalError as e:
+            print(f"Database operation error: {e}. Retrying...")
+            time.sleep(0.5)  # Wait briefly and retry on error
+            db_queue.put((operation, data))  # Re-queue operation for retry
+        finally:
+            db_queue.task_done()
+    connection.close()
+
+# Start the database worker thread
+db_thread = threading.Thread(target=db_worker, daemon=True)
+db_thread.start()
+
+# Queueing functions for database operations
+def queue_insert_file(file_path):
+    db_queue.put(("insert", (file_path, 'to_upload')))
+
+def queue_update_file_status(file_path, status):
+    db_queue.put(("update", (status, file_path)))
 
 # Record Audio
 def save_audio_buffer(buffer, start_time, end_time):
@@ -64,12 +99,8 @@ def save_audio_buffer(buffer, start_time, end_time):
     print(f"Saved audio file: {file_path}")
     audio.terminate()
 
-    # Insert file path into database
-    connection = sqlite3.connect(DATABASE_PATH)
-    cursor = connection.cursor()
-    cursor.execute('INSERT INTO files (file_path, status) VALUES (?, ?)', (file_path, 'to_upload'))
-    connection.commit()
-    connection.close()
+    # Queue insert operation
+    queue_insert_file(file_path)
 
 def record_audio_continuously():
     audio = pyaudio.PyAudio()
@@ -77,7 +108,7 @@ def record_audio_continuously():
     buffer1, buffer2 = [], []
     active_buffer = buffer1
 
-    print("Continuous recording started. Press Ctrl+C to stop.")
+    print("Continuous recording started.")
     try:
         while True:
             start_time = datetime.datetime.now()
@@ -99,10 +130,11 @@ def record_audio_continuously():
 def delete_old_uploaded_files():
     while True:
         current_time = datetime.datetime.now()
-        connection = sqlite3.connect(DATABASE_PATH)
+        connection = sqlite3.connect(DATABASE_PATH, timeout=10)
         cursor = connection.cursor()
         cursor.execute('SELECT file_path, timestamp FROM files WHERE status = "uploaded"')
         uploaded_files = cursor.fetchall()
+        connection.close()
 
         for file_path, timestamp in uploaded_files:
             file_time = datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')
@@ -111,8 +143,7 @@ def delete_old_uploaded_files():
                     os.remove(file_path)
                     print(f"Deleted file: {file_path}")
 
-        connection.close()
-        time.sleep(3600)  # Check every hour
+        time.sleep(3600)
 
 # Touch Control
 GPIO.setmode(GPIO.BCM)
@@ -132,7 +163,6 @@ def stop_recording_service():
     subprocess.run(["sudo", "systemctl", "stop", RECORDING_SERVICE])
     print("Recording service stopped. Will restart after 1 hour if not manually started.")
     waiting_to_restart = True
-    # Set up a timer to automatically restart after 1 hour
     restart_timer = threading.Timer(3600, start_recording_service)
     restart_timer.start()
 
@@ -140,11 +170,9 @@ def monitor_touch():
     try:
         while True:
             if GPIO.input(TOUCH_PIN) == GPIO.HIGH:
-                time.sleep(3)  # Confirm a long press
+                time.sleep(3)
                 if GPIO.input(TOUCH_PIN) == GPIO.HIGH:
-                    # Toggle recording service based on its current status
                     if waiting_to_restart:
-                        # If in waiting period, start immediately
                         start_recording_service()
                     elif subprocess.run(["systemctl", "is-active", "--quiet", RECORDING_SERVICE]).returncode == 0:
                         stop_recording_service()
@@ -164,51 +192,44 @@ def upload_file(file_path):
         with BlobClient.from_blob_url(sas_url) as blob_client, open(file_path, "rb") as file:
             blob_client.upload_blob(file, overwrite=True)
         device_client.notify_blob_upload_status(blob_info["correlationId"], True, 200, "Upload successful.")
-        print(f"Upload successful for {file_path} as {blob_name}")
-        connection = sqlite3.connect(DATABASE_PATH)
-        cursor = connection.cursor()
-        cursor.execute('UPDATE files SET status = ? WHERE file_path = ?', ('uploaded', file_path))
-        connection.commit()
-        connection.close()
+        print(f"Upload successful for {file_path}")
+        queue_update_file_status(file_path, 'uploaded')
     except Exception as e:
         print(f"Failed to upload {file_path}: {e}")
 
 def upload_worker():
     while True:
-        # Connect to the database and fetch files in order of their timestamps (FIFO)
-        connection = sqlite3.connect(DATABASE_PATH)
+        connection = sqlite3.connect(DATABASE_PATH, timeout=10)
         cursor = connection.cursor()
         cursor.execute('SELECT file_path FROM files WHERE status = "to_upload" ORDER BY timestamp ASC')
         files_to_upload = cursor.fetchall()
         connection.close()
 
-        # Attempt to upload each file in the order it was saved
         for (file_path,) in files_to_upload:
-            if upload_file(file_path):  # If upload is successful
-                # Mark the file as uploaded in the database
-                connection = sqlite3.connect(DATABASE_PATH)
-                cursor = connection.cursor()
-                cursor.execute('UPDATE files SET status = ? WHERE file_path = ?', ('uploaded', file_path))
-                connection.commit()
-                connection.close()
+            upload_file(file_path)
 
-        # Wait before checking for new files
         time.sleep(10)
 
-# Set Timezone from Network
+# Timezone Adjustment
+
 def get_timezone_from_ip():
     try:
-        response = requests.get("https://ipapi.co/timezone")
+        response = requests.get("https://ipinfo.io/json", timeout=5)
         if response.status_code == 200:
-            return response.text.strip()
+            data = response.json()
+            return data.get("timezone")
+        else:
+            print(f"Failed to get timezone. Status code: {response.status_code}, Response: {response.text}")
     except Exception as e:
         print(f"Error fetching timezone: {e}")
     return None
 
 def set_local_time():
+    # Get UTC timestamp
     utc_timestamp = datetime.datetime.now(datetime.timezone.utc)
     timezone_str = get_timezone_from_ip()
     if timezone_str:
+        # Define the local timezone and convert the time
         local_tz = pytz.timezone(timezone_str)
         local_time = utc_timestamp.astimezone(local_tz)
         print(f"Local Time in {timezone_str}: {local_time}")
