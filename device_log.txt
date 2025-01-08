@@ -1,0 +1,1922 @@
+2025-01-08 15:15:24,281 - INFO - Connecting to 0100000000dc56e4ef11010-26.local...
+2025-01-08 15:15:29,332 - ERROR - Error with 0100000000dc56e4ef11010-26.local: [Errno -2] Name or service not known
+2025-01-08 15:15:29,333 - INFO - Connecting to 0200000000adfa359e11010-52.local...
+2025-01-08 15:15:34,348 - ERROR - Error with 0200000000adfa359e11010-52.local: [Errno -2] Name or service not known
+2025-01-08 15:15:34,349 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:15:35,238 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:15:35,718 - INFO - Authentication (password) successful!
+2025-01-08 15:15:35,720 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:15:35,721 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:15:37,242 - INFO - Command still running...
+2025-01-08 15:15:38,243 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:15:38,271 - INFO - Command still running...
+2025-01-08 15:15:39,272 - INFO - Executing command: crontab -r
+2025-01-08 15:15:39,305 - INFO - Command still running...
+2025-01-08 15:15:40,306 - INFO - Output: no crontab for pi
+
+2025-01-08 15:15:40,307 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:15:40,358 - INFO - Command still running...
+2025-01-08 15:15:41,359 - INFO - Output: no crontab for root
+
+2025-01-08 15:15:41,360 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:15:41,388 - INFO - Command still running...
+2025-01-08 15:15:42,389 - INFO - Command still running...
+2025-01-08 15:15:43,390 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (28 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409)
+Receiving objects:  70% (987/1409)
+Receiving objects:  71% (1001/1409)
+Receiving objects:  72% (1015/1409)
+Receiving objects:  73% (1029/1409)
+Receiving objects:  74% (1043/1409)
+Receiving objects:  75% (1057/1409)
+Receiving objects:  76% (1071/1409)
+Receiving objects:  77% (1085/1409)
+Receiving objects:  78% (1100/1409)
+Receiving objects:  79% (1114/1409)
+Receiving objects:  80% (1128/1409)
+Receiving objects:  81% (1142/1409)
+Receiving objects:  82% (1156/1409)
+Receiving objects:  83% (1170/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  84% (1184/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  85% (1198/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  86% (1212/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  87% (1226/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  88% (1240/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  89% (1255/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  90% (1269/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  91% (1283/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  92% (1297/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  93% (1311/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  94% (1325/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  95% (1339/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  96% (1353/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  97% (1367/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  98% (1381/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects:  99% (1395/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects: 100% (1409/1409), 1.44 MiB | 2.85 MiB/s
+Receiving objects: 100% (1409/1409), 1.59 MiB | 2.90 MiB/s, done.
+
+2025-01-08 15:15:43,391 - INFO - Executing command: ls
+2025-01-08 15:15:43,447 - INFO - Command still running...
+2025-01-08 15:15:44,449 - INFO - Output: connection_string.txt  New-Device-set-up-and-management  wifi_list.json
+hashes		       README.md			 wifi_sync.py
+main_log.log	       setup_services.py
+main.py		       update_main.py
+
+2025-01-08 15:15:44,449 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:15:44,479 - INFO - Command still running...
+2025-01-08 15:15:45,480 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:15:45,517 - INFO - Command still running...
+2025-01-08 15:15:46,518 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:15:46,553 - INFO - Command still running...
+2025-01-08 15:15:47,554 - INFO - Output: ./.sudo_as_admin_successful
+./.bash_history
+./main_log.log
+./hashes/update_main.py.hash
+./hashes/main.py.hash
+./hashes/README.md.hash
+./hashes/setup_services.py.hash
+./hashes/wifi_sync.py.hash
+./hashes/wifi_list.json.hash
+
+2025-01-08 15:15:47,555 - INFO - Executing command: sudo find . -mindepth 1 -ignore_readdir_race ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -exec rm -rf {} +
+2025-01-08 15:15:47,587 - INFO - Command still running...
+2025-01-08 15:15:48,588 - INFO - Executing command: sudo systemctl restart main.service
+2025-01-08 15:15:48,620 - INFO - Command still running...
+2025-01-08 15:15:49,621 - INFO - Executing command: sudo systemctl restart update_main.service
+2025-01-08 15:15:49,658 - INFO - Command still running...
+2025-01-08 15:15:50,660 - INFO - Executing command: cat /etc/systemd/system/main.service
+2025-01-08 15:15:50,702 - INFO - Command still running...
+2025-01-08 15:15:51,703 - INFO - Output: [Unit]
+Description=Main Python Script Service
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/pkill -f /home/pi/main.py
+ExecStart=/usr/bin/python3 /home/pi/main.py
+WorkingDirectory=/home/pi
+StandardOutput=append:/home/pi/main_log.log
+StandardError=append:/home/pi/main_log.log
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+2025-01-08 15:15:51,705 - INFO - Executing command: cat /etc/systemd/system/wifi_sync.service
+2025-01-08 15:15:51,885 - INFO - Command still running...
+2025-01-08 15:15:52,886 - INFO - Output: 
+    [Unit]
+    Description=Run wifi_sync script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/wifi_sync.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:15:52,887 - INFO - Executing command: cat /etc/systemd/system/update_main.service
+2025-01-08 15:15:52,920 - INFO - Command still running...
+2025-01-08 15:15:53,921 - INFO - Output: 
+    [Unit]
+    Description=Run update_main script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/update_main.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:15:53,922 - INFO - Executing command: ls
+2025-01-08 15:15:53,949 - INFO - Command still running...
+2025-01-08 15:15:54,950 - INFO - Output: connection_string.txt  main.py		  update_main.py
+hashes		       README.md	  wifi_list.json
+main_log.log	       setup_services.py  wifi_sync.py
+
+2025-01-08 15:15:54,953 - INFO - Connecting to 0400000000a2b7685811010-40.local...
+2025-01-08 15:15:59,969 - ERROR - Error with 0400000000a2b7685811010-40.local: [Errno -2] Name or service not known
+2025-01-08 15:15:59,970 - INFO - Connecting to 0500000000f9c9f7b711010-48.local...
+2025-01-08 15:16:04,984 - ERROR - Error with 0500000000f9c9f7b711010-48.local: [Errno -2] Name or service not known
+2025-01-08 15:16:04,985 - INFO - Connecting to 0600000000573cbd0c11010-36.local...
+2025-01-08 15:16:10,006 - ERROR - Error with 0600000000573cbd0c11010-36.local: [Errno -2] Name or service not known
+2025-01-08 15:16:10,007 - INFO - Connecting to 0700000000ab2d235011010-09.local...
+2025-01-08 15:16:15,029 - ERROR - Error with 0700000000ab2d235011010-09.local: [Errno -2] Name or service not known
+2025-01-08 15:16:15,032 - INFO - Connecting to 08000000006b9ae59211010-69.local...
+2025-01-08 15:16:20,048 - ERROR - Error with 08000000006b9ae59211010-69.local: [Errno -2] Name or service not known
+2025-01-08 15:16:20,049 - INFO - Connecting to 09000000007f7944b611010-36.local...
+2025-01-08 15:16:25,064 - ERROR - Error with 09000000007f7944b611010-36.local: [Errno -2] Name or service not known
+2025-01-08 15:16:25,065 - INFO - Connecting to 10000000001c98632411010-68.local...
+2025-01-08 15:16:30,097 - ERROR - Error with 10000000001c98632411010-68.local: [Errno -2] Name or service not known
+2025-01-08 15:16:30,098 - INFO - Connecting to 11000000003ba55bb011010-39.local...
+2025-01-08 15:16:35,119 - ERROR - Error with 11000000003ba55bb011010-39.local: [Errno -2] Name or service not known
+2025-01-08 15:16:35,119 - INFO - Connecting to 1200000000e2dea0f511010-66.local...
+2025-01-08 15:16:40,138 - ERROR - Error with 1200000000e2dea0f511010-66.local: [Errno -2] Name or service not known
+2025-01-08 15:16:40,139 - INFO - Connecting to 1300000000d29bfa5611010-44.local...
+2025-01-08 15:16:40,362 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:16:40,751 - INFO - Authentication (password) successful!
+2025-01-08 15:16:40,752 - INFO - Connection successful to 1300000000d29bfa5611010-44.local.
+2025-01-08 15:16:40,753 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:16:41,048 - INFO - Command still running...
+2025-01-08 15:16:42,050 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:16:42,059 - INFO - Command still running...
+2025-01-08 15:16:43,060 - INFO - Executing command: crontab -r
+2025-01-08 15:16:43,070 - INFO - Command still running...
+2025-01-08 15:16:44,071 - INFO - Output: no crontab for pi
+
+2025-01-08 15:16:44,072 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:16:44,082 - INFO - Command still running...
+2025-01-08 15:16:45,082 - INFO - Output: no crontab for root
+
+2025-01-08 15:16:45,083 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:16:45,093 - INFO - Command still running...
+2025-01-08 15:16:46,094 - INFO - Command still running...
+2025-01-08 15:16:47,094 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (89 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409)
+Receiving objects:  70% (987/1409)
+Receiving objects:  71% (1001/1409)
+Receiving objects:  72% (1015/1409)
+Receiving objects:  73% (1029/1409)
+Receiving objects:  74% (1043/1409)
+Receiving objects:  75% (1057/1409)
+Receiving objects:  76% (1071/1409)
+Receiving objects:  77% (1085/1409)
+Receiving objects:  78% (1100/1409)
+Receiving objects:  79% (1114/1409)
+Receiving objects:  80% (1128/1409)
+Receiving objects:  81% (1142/1409)
+Receiving objects:  82% (1156/1409)
+Receiving objects:  83% (1170/1409)
+Receiving objects:  84% (1184/1409)
+Receiving objects:  85% (1198/1409)
+Receiving objects:  86% (1212/1409)
+Receiving objects:  87% (1226/1409)
+Receiving objects:  88% (1240/1409)
+Receiving objects:  89% (1255/1409)
+Receiving objects:  90% (1269/1409)
+Receiving objects:  91% (1283/1409)
+Receiving objects:  92% (1297/1409)
+Receiving objects:  93% (1311/1409)
+Receiving objects:  94% (1325/1409)
+Receiving objects:  95% (1339/1409)
+Receiving objects:  96% (1353/1409)
+Receiving objects:  97% (1367/1409)
+Receiving objects:  98% (1381/1409)
+Receiving objects:  99% (1395/1409)
+Receiving objects: 100% (1409/1409)
+Receiving objects: 100% (1409/1409), 1.59 MiB | 3.80 MiB/s, done.
+
+2025-01-08 15:16:47,095 - INFO - Executing command: ls
+2025-01-08 15:16:47,105 - INFO - Command still running...
+2025-01-08 15:16:48,106 - INFO - Output: connection_string.txt  main.py				 setup_services.py
+device_log.txt	       New-Device-set-up-and-management  test.py
+hashes		       radar.py				 update_main.py
+hlk_ld6002	       raspberry-pi-audio_test		 wifi_list.json
+main_log.log	       README.md			 wifi_sync.py
+
+2025-01-08 15:16:48,107 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:16:48,116 - INFO - Command still running...
+2025-01-08 15:16:49,117 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:16:49,127 - INFO - Command still running...
+2025-01-08 15:16:50,128 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:16:50,138 - INFO - Command still running...
+2025-01-08 15:16:51,139 - INFO - Command still running...
+2025-01-08 15:16:52,141 - INFO - Command still running...
+2025-01-08 15:16:53,168 - INFO - Command still running...
+2025-01-08 15:16:54,174 - INFO - Command still running...
+2025-01-08 15:16:55,182 - INFO - Command still running...
+2025-01-08 15:16:56,183 - INFO - Command still running...
+2025-01-08 15:16:57,184 - INFO - Command still running...
+2025-01-08 15:16:58,184 - INFO - Command still running...
+2025-01-08 15:16:59,185 - INFO - Command still running...
+2025-01-08 15:17:00,186 - INFO - Command still running...
+2025-01-08 15:17:01,187 - INFO - Command still running...
+2025-01-08 15:17:02,188 - INFO - Command still running...
+2025-01-08 15:17:03,189 - INFO - Command still running...
+2025-01-08 15:17:24,894 - INFO - Connecting to 0100000000dc56e4ef11010-26.local...
+2025-01-08 15:17:29,916 - ERROR - Error with 0100000000dc56e4ef11010-26.local: [Errno -2] Name or service not known
+2025-01-08 15:17:29,917 - INFO - Connecting to 0200000000adfa359e11010-52.local...
+2025-01-08 15:17:34,963 - ERROR - Error with 0200000000adfa359e11010-52.local: [Errno -2] Name or service not known
+2025-01-08 15:17:34,964 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:17:35,295 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:17:35,774 - INFO - Authentication (password) successful!
+2025-01-08 15:17:35,775 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:17:35,776 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:17:36,711 - INFO - Command still running...
+2025-01-08 15:17:37,712 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:17:37,746 - INFO - Command still running...
+2025-01-08 15:17:38,747 - INFO - Executing command: crontab -r
+2025-01-08 15:17:38,776 - INFO - Command still running...
+2025-01-08 15:17:39,778 - INFO - Output: no crontab for pi
+
+2025-01-08 15:17:39,778 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:17:39,806 - INFO - Command still running...
+2025-01-08 15:17:40,807 - INFO - Output: no crontab for root
+
+2025-01-08 15:17:40,808 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:17:40,839 - INFO - Command still running...
+2025-01-08 15:17:41,840 - INFO - Command still running...
+2025-01-08 15:17:42,841 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (5 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409)
+Receiving objects:  70% (987/1409)
+Receiving objects:  71% (1001/1409)
+Receiving objects:  72% (1015/1409)
+Receiving objects:  73% (1029/1409)
+Receiving objects:  74% (1043/1409)
+Receiving objects:  75% (1057/1409)
+Receiving objects:  76% (1071/1409)
+Receiving objects:  77% (1085/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  78% (1100/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  79% (1114/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  80% (1128/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  81% (1142/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  82% (1156/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  83% (1170/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  84% (1184/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  85% (1198/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  86% (1212/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  87% (1226/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  88% (1240/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  89% (1255/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  90% (1269/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  91% (1283/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  92% (1297/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  93% (1311/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  94% (1325/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  95% (1339/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  96% (1353/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  97% (1367/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  98% (1381/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects:  99% (1395/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects: 100% (1409/1409), 1.32 MiB | 2.61 MiB/s
+Receiving objects: 100% (1409/1409), 1.59 MiB | 2.78 MiB/s, done.
+
+2025-01-08 15:17:42,843 - INFO - Executing command: ls
+2025-01-08 15:17:42,873 - INFO - Command still running...
+2025-01-08 15:17:43,874 - INFO - Output: connection_string.txt  New-Device-set-up-and-management  wifi_list.json
+hashes		       README.md			 wifi_sync.py
+main_log.log	       setup_services.py
+main.py		       update_main.py
+
+2025-01-08 15:17:43,875 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:17:43,905 - INFO - Command still running...
+2025-01-08 15:17:44,906 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:17:44,952 - INFO - Command still running...
+2025-01-08 15:17:45,953 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:17:45,987 - INFO - Command still running...
+2025-01-08 15:17:46,988 - INFO - Output: ./.sudo_as_admin_successful
+./main_log.log
+./hashes/update_main.py.hash
+./hashes/main.py.hash
+./hashes/README.md.hash
+./hashes/setup_services.py.hash
+./hashes/wifi_sync.py.hash
+./hashes/wifi_list.json.hash
+
+2025-01-08 15:17:46,989 - INFO - Executing command: sudo find . -mindepth 1 -ignore_readdir_race ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -exec rm -rf {} +
+2025-01-08 15:17:47,021 - INFO - Command still running...
+2025-01-08 15:17:48,022 - INFO - Executing command: sudo systemctl restart main.service
+2025-01-08 15:17:48,051 - INFO - Command still running...
+2025-01-08 15:17:49,052 - INFO - Executing command: sudo systemctl restart update_main.service
+2025-01-08 15:17:49,085 - INFO - Command still running...
+2025-01-08 15:17:50,086 - INFO - Executing command: cat /etc/systemd/system/main.service
+2025-01-08 15:17:50,123 - INFO - Command still running...
+2025-01-08 15:17:51,124 - INFO - Output: [Unit]
+Description=Main Python Script Service
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/pkill -f /home/pi/main.py
+ExecStart=/usr/bin/python3 /home/pi/main.py
+WorkingDirectory=/home/pi
+StandardOutput=append:/home/pi/main_log.log
+StandardError=append:/home/pi/main_log.log
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+2025-01-08 15:17:51,125 - INFO - Executing command: cat /etc/systemd/system/wifi_sync.service
+2025-01-08 15:17:51,443 - INFO - Command still running...
+2025-01-08 15:17:52,444 - INFO - Output: 
+    [Unit]
+    Description=Run wifi_sync script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/wifi_sync.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:17:52,445 - INFO - Executing command: cat /etc/systemd/system/update_main.service
+2025-01-08 15:17:52,481 - INFO - Command still running...
+2025-01-08 15:17:53,482 - INFO - Output: 
+    [Unit]
+    Description=Run update_main script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/update_main.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:17:53,484 - INFO - Executing command: ls
+2025-01-08 15:17:53,515 - INFO - Command still running...
+2025-01-08 15:17:54,516 - INFO - Output: connection_string.txt  main.py		  update_main.py
+hashes		       README.md	  wifi_list.json
+main_log.log	       setup_services.py  wifi_sync.py
+
+2025-01-08 15:17:54,518 - INFO - Connecting to 0400000000a2b7685811010-40.local...
+2025-01-08 15:17:59,536 - ERROR - Error with 0400000000a2b7685811010-40.local: [Errno -2] Name or service not known
+2025-01-08 15:17:59,537 - INFO - Connecting to 0500000000f9c9f7b711010-48.local...
+2025-01-08 15:18:04,554 - ERROR - Error with 0500000000f9c9f7b711010-48.local: [Errno -2] Name or service not known
+2025-01-08 15:18:04,555 - INFO - Connecting to 0600000000573cbd0c11010-36.local...
+2025-01-08 15:18:09,575 - ERROR - Error with 0600000000573cbd0c11010-36.local: [Errno -2] Name or service not known
+2025-01-08 15:18:09,576 - INFO - Connecting to 0700000000ab2d235011010-09.local...
+2025-01-08 15:18:14,595 - ERROR - Error with 0700000000ab2d235011010-09.local: [Errno -2] Name or service not known
+2025-01-08 15:18:14,596 - INFO - Connecting to 08000000006b9ae59211010-69.local...
+2025-01-08 15:18:19,627 - ERROR - Error with 08000000006b9ae59211010-69.local: [Errno -2] Name or service not known
+2025-01-08 15:18:19,628 - INFO - Connecting to 09000000007f7944b611010-36.local...
+2025-01-08 15:18:24,644 - ERROR - Error with 09000000007f7944b611010-36.local: [Errno -2] Name or service not known
+2025-01-08 15:18:24,645 - INFO - Connecting to 10000000001c98632411010-68.local...
+2025-01-08 15:18:29,663 - ERROR - Error with 10000000001c98632411010-68.local: [Errno -2] Name or service not known
+2025-01-08 15:18:29,664 - INFO - Connecting to 11000000003ba55bb011010-39.local...
+2025-01-08 15:18:34,677 - ERROR - Error with 11000000003ba55bb011010-39.local: [Errno -2] Name or service not known
+2025-01-08 15:18:34,678 - INFO - Connecting to 1200000000e2dea0f511010-66.local...
+2025-01-08 15:18:39,723 - ERROR - Error with 1200000000e2dea0f511010-66.local: [Errno -2] Name or service not known
+2025-01-08 15:18:39,724 - INFO - Connecting to 1300000000d29bfa5611010-44.local...
+2025-01-08 15:18:39,849 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:18:40,252 - INFO - Authentication (password) successful!
+2025-01-08 15:18:40,254 - INFO - Connection successful to 1300000000d29bfa5611010-44.local.
+2025-01-08 15:18:40,254 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:18:40,552 - INFO - Command still running...
+2025-01-08 15:18:41,553 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:18:41,563 - INFO - Command still running...
+2025-01-08 15:18:42,564 - INFO - Executing command: crontab -r
+2025-01-08 15:18:42,574 - INFO - Command still running...
+2025-01-08 15:18:43,575 - INFO - Output: no crontab for pi
+
+2025-01-08 15:18:43,575 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:18:43,585 - INFO - Command still running...
+2025-01-08 15:18:44,586 - INFO - Output: no crontab for root
+
+2025-01-08 15:18:44,587 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:18:44,597 - INFO - Command still running...
+2025-01-08 15:18:45,597 - INFO - Command still running...
+2025-01-08 15:18:46,599 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (9 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409)
+Receiving objects:  70% (987/1409)
+Receiving objects:  71% (1001/1409)
+Receiving objects:  72% (1015/1409)
+Receiving objects:  73% (1029/1409)
+Receiving objects:  74% (1043/1409)
+Receiving objects:  75% (1057/1409)
+Receiving objects:  76% (1071/1409)
+Receiving objects:  77% (1085/1409)
+Receiving objects:  78% (1100/1409)
+Receiving objects:  79% (1114/1409)
+Receiving objects:  80% (1128/1409)
+Receiving objects:  81% (1142/1409)
+Receiving objects:  82% (1156/1409)
+Receiving objects:  83% (1170/1409)
+Receiving objects:  84% (1184/1409)
+Receiving objects:  85% (1198/1409)
+Receiving objects:  86% (1212/1409)
+Receiving objects:  87% (1226/1409)
+Receiving objects:  88% (1240/1409)
+Receiving objects:  89% (1255/1409)
+Receiving objects:  90% (1269/1409)
+Receiving objects:  91% (1283/1409)
+Receiving objects:  92% (1297/1409)
+Receiving objects:  93% (1311/1409)
+Receiving objects:  94% (1325/1409)
+Receiving objects:  95% (1339/1409)
+Receiving objects:  96% (1353/1409)
+Receiving objects:  97% (1367/1409)
+Receiving objects:  98% (1381/1409)
+Receiving objects:  99% (1395/1409)
+Receiving objects: 100% (1409/1409)
+Receiving objects: 100% (1409/1409), 1.59 MiB | 4.51 MiB/s, done.
+
+2025-01-08 15:18:46,600 - INFO - Executing command: ls
+2025-01-08 15:18:46,609 - INFO - Command still running...
+2025-01-08 15:18:47,610 - INFO - Output: connection_string.txt  main.py				 setup_services.py
+device_log.txt	       New-Device-set-up-and-management  test.py
+hashes		       radar.py				 update_main.py
+hlk_ld6002	       raspberry-pi-audio_test		 wifi_list.json
+main_log.log	       README.md			 wifi_sync.py
+
+2025-01-08 15:18:47,611 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:18:47,620 - INFO - Command still running...
+2025-01-08 15:18:48,621 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:18:48,631 - INFO - Command still running...
+2025-01-08 15:18:49,632 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:18:49,641 - INFO - Command still running...
+2025-01-08 15:18:50,650 - INFO - Command still running...
+2025-01-08 15:18:51,669 - INFO - Command still running...
+2025-01-08 15:18:52,696 - INFO - Command still running...
+2025-01-08 15:18:53,708 - INFO - Command still running...
+2025-01-08 15:18:54,709 - INFO - Command still running...
+2025-01-08 15:18:55,710 - INFO - Command still running...
+2025-01-08 15:18:56,710 - INFO - Command still running...
+2025-01-08 15:18:57,711 - INFO - Command still running...
+2025-01-08 15:18:58,712 - INFO - Command still running...
+2025-01-08 15:18:59,713 - INFO - Command still running...
+2025-01-08 15:19:00,713 - INFO - Command still running...
+2025-01-08 15:19:01,714 - INFO - Command still running...
+2025-01-08 15:19:02,715 - INFO - Command still running...
+2025-01-08 15:19:03,716 - INFO - Command still running...
+2025-01-08 15:19:04,717 - INFO - Command still running...
+2025-01-08 15:19:05,718 - INFO - Command still running...
+2025-01-08 15:19:06,719 - INFO - Command still running...
+2025-01-08 15:19:24,944 - INFO - Connecting to 0100000000dc56e4ef11010-26.local...
+2025-01-08 15:19:29,966 - ERROR - Error with 0100000000dc56e4ef11010-26.local: [Errno -2] Name or service not known
+2025-01-08 15:19:29,967 - INFO - Connecting to 0200000000adfa359e11010-52.local...
+2025-01-08 15:19:34,984 - ERROR - Error with 0200000000adfa359e11010-52.local: [Errno -2] Name or service not known
+2025-01-08 15:19:34,985 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:19:35,519 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:19:36,026 - INFO - Authentication (password) successful!
+2025-01-08 15:19:36,027 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:19:36,028 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:19:37,099 - INFO - Command still running...
+2025-01-08 15:19:38,100 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:19:38,130 - INFO - Command still running...
+2025-01-08 15:19:39,131 - INFO - Executing command: crontab -r
+2025-01-08 15:19:39,162 - INFO - Command still running...
+2025-01-08 15:19:40,163 - INFO - Output: no crontab for pi
+
+2025-01-08 15:19:40,164 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:19:40,196 - INFO - Command still running...
+2025-01-08 15:19:41,197 - INFO - Output: no crontab for root
+
+2025-01-08 15:19:41,197 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:19:41,228 - INFO - Command still running...
+2025-01-08 15:19:42,229 - INFO - Command still running...
+2025-01-08 15:19:43,231 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (10 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409)
+Receiving objects:  70% (987/1409)
+Receiving objects:  71% (1001/1409)
+Receiving objects:  72% (1015/1409)
+Receiving objects:  73% (1029/1409)
+Receiving objects:  74% (1043/1409)
+Receiving objects:  75% (1057/1409)
+Receiving objects:  76% (1071/1409)
+Receiving objects:  77% (1085/1409)
+Receiving objects:  78% (1100/1409)
+Receiving objects:  79% (1114/1409)
+Receiving objects:  80% (1128/1409)
+Receiving objects:  81% (1142/1409)
+Receiving objects:  82% (1156/1409)
+Receiving objects:  83% (1170/1409)
+Receiving objects:  84% (1184/1409)
+Receiving objects:  85% (1198/1409)
+Receiving objects:  86% (1212/1409)
+Receiving objects:  87% (1226/1409)
+Receiving objects:  88% (1240/1409)
+Receiving objects:  89% (1255/1409)
+Receiving objects:  90% (1269/1409)
+Receiving objects:  91% (1283/1409)
+Receiving objects:  92% (1297/1409)
+Receiving objects:  93% (1311/1409)
+Receiving objects:  94% (1325/1409)
+Receiving objects:  95% (1339/1409)
+Receiving objects:  96% (1353/1409)
+Receiving objects:  97% (1367/1409)
+Receiving objects:  98% (1381/1409)
+Receiving objects:  99% (1395/1409)
+Receiving objects: 100% (1409/1409)
+Receiving objects: 100% (1409/1409), 1.59 MiB | 3.37 MiB/s, done.
+
+2025-01-08 15:19:43,232 - INFO - Executing command: ls
+2025-01-08 15:19:43,264 - INFO - Command still running...
+2025-01-08 15:19:44,266 - INFO - Output: connection_string.txt  New-Device-set-up-and-management  wifi_list.json
+hashes		       README.md			 wifi_sync.py
+main_log.log	       setup_services.py
+main.py		       update_main.py
+
+2025-01-08 15:19:44,266 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:19:44,302 - INFO - Command still running...
+2025-01-08 15:19:45,303 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:19:45,348 - INFO - Command still running...
+2025-01-08 15:19:46,349 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:19:46,404 - INFO - Command still running...
+2025-01-08 15:19:47,405 - INFO - Output: ./.sudo_as_admin_successful
+./main_log.log
+./hashes/update_main.py.hash
+./hashes/main.py.hash
+./hashes/README.md.hash
+./hashes/setup_services.py.hash
+./hashes/wifi_sync.py.hash
+./hashes/wifi_list.json.hash
+
+2025-01-08 15:19:47,406 - INFO - Executing command: sudo find . -mindepth 1 -ignore_readdir_race ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -exec rm -rf {} +
+2025-01-08 15:19:47,455 - INFO - Command still running...
+2025-01-08 15:19:48,456 - INFO - Executing command: sudo systemctl restart main.service
+2025-01-08 15:19:48,500 - INFO - Command still running...
+2025-01-08 15:19:49,502 - INFO - Executing command: sudo systemctl restart update_main.service
+2025-01-08 15:19:49,536 - INFO - Command still running...
+2025-01-08 15:19:50,537 - INFO - Executing command: cat /etc/systemd/system/main.service
+2025-01-08 15:19:50,606 - INFO - Command still running...
+2025-01-08 15:19:51,607 - INFO - Output: [Unit]
+Description=Main Python Script Service
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/pkill -f /home/pi/main.py
+ExecStart=/usr/bin/python3 /home/pi/main.py
+WorkingDirectory=/home/pi
+StandardOutput=append:/home/pi/main_log.log
+StandardError=append:/home/pi/main_log.log
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+2025-01-08 15:19:51,608 - INFO - Executing command: cat /etc/systemd/system/wifi_sync.service
+2025-01-08 15:19:51,680 - INFO - Command still running...
+2025-01-08 15:19:52,681 - INFO - Output: 
+    [Unit]
+    Description=Run wifi_sync script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/wifi_sync.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:19:52,682 - INFO - Executing command: cat /etc/systemd/system/update_main.service
+2025-01-08 15:19:52,715 - INFO - Command still running...
+2025-01-08 15:19:53,716 - INFO - Output: 
+    [Unit]
+    Description=Run update_main script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/update_main.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:19:53,717 - INFO - Executing command: ls
+2025-01-08 15:19:53,761 - INFO - Command still running...
+2025-01-08 15:19:54,762 - INFO - Output: connection_string.txt  main.py		  update_main.py
+hashes		       README.md	  wifi_list.json
+main_log.log	       setup_services.py  wifi_sync.py
+
+2025-01-08 15:19:54,763 - INFO - Connecting to 0400000000a2b7685811010-40.local...
+2025-01-08 15:19:59,807 - ERROR - Error with 0400000000a2b7685811010-40.local: [Errno -2] Name or service not known
+2025-01-08 15:19:59,808 - INFO - Connecting to 0500000000f9c9f7b711010-48.local...
+2025-01-08 15:20:04,827 - ERROR - Error with 0500000000f9c9f7b711010-48.local: [Errno -2] Name or service not known
+2025-01-08 15:20:04,828 - INFO - Connecting to 0600000000573cbd0c11010-36.local...
+2025-01-08 15:20:09,845 - ERROR - Error with 0600000000573cbd0c11010-36.local: [Errno -2] Name or service not known
+2025-01-08 15:20:09,846 - INFO - Connecting to 0700000000ab2d235011010-09.local...
+2025-01-08 15:20:14,867 - ERROR - Error with 0700000000ab2d235011010-09.local: [Errno -2] Name or service not known
+2025-01-08 15:20:14,867 - INFO - Connecting to 08000000006b9ae59211010-69.local...
+2025-01-08 15:20:19,881 - ERROR - Error with 08000000006b9ae59211010-69.local: [Errno -2] Name or service not known
+2025-01-08 15:20:19,881 - INFO - Connecting to 09000000007f7944b611010-36.local...
+2025-01-08 15:20:24,983 - ERROR - Error with 09000000007f7944b611010-36.local: [Errno -2] Name or service not known
+2025-01-08 15:20:24,983 - INFO - Connecting to 10000000001c98632411010-68.local...
+2025-01-08 15:20:30,003 - ERROR - Error with 10000000001c98632411010-68.local: [Errno -2] Name or service not known
+2025-01-08 15:20:30,003 - INFO - Connecting to 11000000003ba55bb011010-39.local...
+2025-01-08 15:20:35,020 - ERROR - Error with 11000000003ba55bb011010-39.local: [Errno -2] Name or service not known
+2025-01-08 15:20:35,021 - INFO - Connecting to 1200000000e2dea0f511010-66.local...
+2025-01-08 15:20:40,040 - ERROR - Error with 1200000000e2dea0f511010-66.local: [Errno -2] Name or service not known
+2025-01-08 15:20:40,041 - INFO - Connecting to 1400000000b0cf241b11010-39.local...
+2025-01-08 15:20:45,077 - ERROR - Error with 1400000000b0cf241b11010-39.local: [Errno -2] Name or service not known
+2025-01-08 15:20:45,078 - INFO - Connecting to 15000000002bd8a04e11010-25.local...
+2025-01-08 15:20:50,092 - ERROR - Error with 15000000002bd8a04e11010-25.local: [Errno -2] Name or service not known
+2025-01-08 15:20:50,093 - INFO - Connecting to 1600000000a0f9059d11010-14.local...
+2025-01-08 15:20:55,161 - ERROR - Error with 1600000000a0f9059d11010-14.local: [Errno -2] Name or service not known
+2025-01-08 15:20:55,162 - INFO - Connecting to 17000000001983ffcb11010-07.local...
+2025-01-08 15:21:00,188 - ERROR - Error with 17000000001983ffcb11010-07.local: [Errno -2] Name or service not known
+2025-01-08 15:21:00,189 - INFO - Connecting to 18000000007aeee88d11010-01.local...
+2025-01-08 15:21:05,210 - ERROR - Error with 18000000007aeee88d11010-01.local: [Errno -2] Name or service not known
+2025-01-08 15:21:05,211 - INFO - Connecting to 1900000000363df69911010-47.local...
+2025-01-08 15:21:10,231 - ERROR - Error with 1900000000363df69911010-47.local: [Errno -2] Name or service not known
+2025-01-08 15:21:10,232 - INFO - Connecting to 20000000005b46b12b11010-54.local...
+2025-01-08 15:21:15,250 - ERROR - Error with 20000000005b46b12b11010-54.local: [Errno -2] Name or service not known
+2025-01-08 15:21:15,251 - INFO - Connecting to 21000000001625892a11010-46.local...
+2025-01-08 15:21:20,271 - ERROR - Error with 21000000001625892a11010-46.local: [Errno -2] Name or service not known
+2025-01-08 15:21:20,272 - INFO - Connecting to 220000000008813ee611010-17.local...
+2025-01-08 15:21:21,071 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:21:21,678 - INFO - Authentication (password) successful!
+2025-01-08 15:21:21,679 - INFO - Connection successful to 220000000008813ee611010-17.local.
+2025-01-08 15:21:21,680 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:21:23,163 - INFO - Command still running...
+2025-01-08 15:21:24,164 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:21:24,191 - INFO - Command still running...
+2025-01-08 15:21:25,192 - INFO - Executing command: crontab -r
+2025-01-08 15:21:25,222 - INFO - Command still running...
+2025-01-08 15:21:26,223 - INFO - Output: no crontab for pi
+
+2025-01-08 15:21:26,224 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:21:26,262 - INFO - Command still running...
+2025-01-08 15:21:27,263 - INFO - Output: no crontab for root
+
+2025-01-08 15:21:27,264 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:21:27,298 - INFO - Command still running...
+2025-01-08 15:21:28,299 - INFO - Command still running...
+2025-01-08 15:21:29,300 - INFO - Command still running...
+2025-01-08 15:21:30,301 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (87 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  70% (987/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  71% (1001/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  72% (1015/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  73% (1029/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  74% (1043/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  75% (1057/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  76% (1071/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  77% (1085/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  78% (1100/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  79% (1114/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  80% (1128/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  81% (1142/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  82% (1156/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  83% (1170/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  84% (1184/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  85% (1198/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  86% (1212/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  87% (1226/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  88% (1240/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  89% (1255/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  90% (1269/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  91% (1283/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  92% (1297/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  93% (1311/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  94% (1325/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  95% (1339/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  96% (1353/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  97% (1367/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  98% (1381/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects:  99% (1395/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects: 100% (1409/1409), 1.15 MiB | 2.29 MiB/s
+Receiving objects: 100% (1409/1409), 1.59 MiB | 2.65 MiB/s, done.
+
+2025-01-08 15:21:30,302 - INFO - Executing command: ls
+2025-01-08 15:21:30,339 - INFO - Command still running...
+2025-01-08 15:21:31,340 - INFO - Output: connection_string.txt  main.py				 setup_services.py
+data		       New-Device-set-up-and-management  update_main.py
+hashes		       README.md			 wifi_list.json
+main_log.log	       repo_commit_hash.txt		 wifi_sync.py
+
+2025-01-08 15:21:31,341 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:21:31,384 - INFO - Command still running...
+2025-01-08 15:21:32,385 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:21:32,425 - INFO - Command still running...
+2025-01-08 15:21:33,426 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:21:33,458 - INFO - Command still running...
+2025-01-08 15:21:34,459 - INFO - Output: ./.bash_logout
+./.ssh/id_rsa.pub
+./.ssh/known_hosts
+./.ssh/id_rsa
+./.profile
+./.git/HEAD
+./.git/config
+./.git/info/exclude
+./.git/objects/01/8b117ac08e693cce1f922ac2943e137ac92e11
+./.git/objects/3a/c0f2acdcd0900c7c5aec3bc937b8e325c12162
+./.git/objects/ac/add7ddeef5f8627b1775766daf32aeea21c1bc
+./.git/objects/ac/6ba10970e910a60cae1e7d6a216538379a9b56
+./.git/objects/58/2e2e65964db638c435a8c086aa8f38611d9a71
+./.git/objects/a5/3d1879f293eed57c4fc7d2a3a399dfee94dbc8
+./.git/objects/a5/86cd0b134483ec9047ecb700910d503b277c83
+./.git/objects/a5/01ef485b3a8635203ca78bc3d2e6af9b546917
+./.git/objects/a5/5901bde8c160650ae24cd87c44f43d2df4813f
+./.git/objects/92/9207bb5aec9d7c9ec1900199ae2fc6de487acd
+./.git/objects/f0/5721b14f65db100cff8f9d25518c9b1ccdf903
+./.git/objects/49/63fb3d791e8cd1c617aa9d7e0bd94d599bac0b
+./.git/objects/cc/2b8f6f3269e4de88c8c125a386a442e11e2965
+./.git/objects/c5/2efb9e457a58e6a32491deff22982c7e7285e6
+./.git/objects/cb/cc9ad8dff5e92551802361c4f3485c6d50bbf2
+./.git/objects/cb/0925f4ff2d92bc743cf6dc7d45ed5136741890
+./.git/objects/c6/a7d54eebfee40c1da4f91b95a3cf371e82f5c7
+./.git/objects/c6/5c85fb969f44a4131c287a6971be746624bf53
+./.git/objects/34/8b187fb73e494d36622b5f0dad2f15578db970
+./.git/objects/pack/pack-331c1d0fa48dd8e5a9c8f252188b083d24ec5bc7.pack
+./.git/objects/pack/pack-df58abfe16181d728249b581e142638ca6ffacfa.pack
+./.git/objects/pack/pack-331c1d0fa48dd8e5a9c8f252188b083d24ec5bc7.idx
+./.git/objects/pack/pack-df58abfe16181d728249b581e142638ca6ffacfa.idx
+./.git/objects/b0/13e9f1e5f15317c320370474b4fe69f4463e0b
+./.git/objects/05/4e0954da0467b7a7630d8f2bf5da6edc6b3efe
+./.git/objects/70/48a67499867ed3cc7cd71f0e6f22a9d9677625
+./.git/objects/70/e005ab469c91f3b360d524e49d8a816cf5e167
+./.git/objects/42/de6b2e4afed7779531ce86a817b66f63445a48
+./.git/objects/ae/11d4a96055e3d0983d20f62e9bb4279d025324
+./.git/objects/ae/7f3f82bffbabe234e96ed5cba5f02efed81fff
+./.git/objects/1e/6f51f61dbdd24a5d9dc7b478c986447195383f
+./.git/objects/a7/ae552536ef67352dc4611e543d197b0da99101
+./.git/objects/44/aa531366783196128221e2469055f9331871b5
+./.git/objects/4e/d70fdcaef6502329e40c05ab89309a86dc2668
+./.git/objects/6c/49de2112cc9ab67b5a6136b6c7ed1ed4c2cd5d
+./.git/objects/6c/aa1879eab4af151919010d3f277ba7334ddb89
+./.git/objects/20/e3efc139e492032a1e950140a7293b4dd5b085
+./.git/objects/20/35e6cb388f66c6f8451cd768372eccf36bb452
+./.git/objects/e4/eea9aaa5d818c7aec2c61b6d052d175159d667
+./.git/objects/ec/afa8c0b355f30213c0138018815703dff1906b
+./.git/objects/eb/d8982d8b8eaf929ef29b57692b909d628b060a
+./.git/objects/e2/f61f01aac9b903e927457327eddc0619ee174f
+./.git/objects/15/afe8edbe98a4856283289d321ccc03ed90ee26
+./.git/objects/62/d217dbd518e3ce64a9e199f038fb72df13b123
+./.git/objects/62/23859bec4132417c5067d96339df27ec6ea147
+./.git/objects/6a/f3a91c9a2c773d50473911e6827f0f13983f88
+./.git/objects/6a/e6577e4675e656dfb558b22265c96f27d6f14b
+./.git/objects/fc/6d12352584345b97993247ff5f00bd08c49859
+./.git/objects/fc/d3ec647f7618fd0c905611175aaa5110955181
+./.git/objects/fc/6cb09c49569f4e4b1bedcfe805f2475316a760
+./.git/objects/30/a91632ee8220d6d0796e5408363c6df12c5b20
+./.git/objects/3e/a35007696f3d6a24e0f3f5e5c3b9c7a8a63527
+./.git/objects/2b/7372fff897e593d45abf9aac40d742c4a0360a
+./.git/objects/2b/cf8a0f03f774fbb3e39e9859a4cc5f571669a7
+./.git/objects/2b/dfd97d128fd38973e0725ad3cbc8834989fbc6
+./.git/objects/47/e9f17d3dcb5d4aa1311811df6a3c94ea4770d7
+./.git/objects/47/0c18561bfd01aec90ff724aca93f353f8e18e3
+./.git/objects/50/14326ffed05260dc520fd45d7f271502ef9e59
+./.git/objects/71/accde09b757aceab0cdbed41ab4410ddbc347f
+./.git/objects/93/a7d2717e3c5932aa22fcb87fd30275eb92d79c
+./.git/objects/10/5f03969ba00024c44b288fa3581b743209490e
+./.git/objects/67/a7085bfb661e09ba427e7d8a904650e1258cff
+./.git/objects/ef/121f928f96e0abffa004530c111b0ffefc0155
+./.git/objects/68/716022291edfd8f7107d07fccf6c5ae2b8ee67
+./.git/objects/6f/94fcc623d15db86dbf38f9a85fb60259267d10
+./.git/objects/6f/fc4024d2ea595e8390020c92543192f73cb85d
+./.git/objects/ca/b3d60b6efadb6b72e0abdaf604b07ab54eabb7
+./.git/objects/c8/f2635299da76cdf0244011fdcc521f826a79ba
+./.git/objects/7a/65f3136c42081a1fcd301c25f77dbc8bc5e037
+./.git/objects/78/ce7ef9b90b8fd567e84892c79e6606d17e67a3
+./.git/objects/24/4893c6424228e159eed3626f878a568e3bef3a
+./.git/objects/24/78681436fdcc137570b5f0aa93d057fcc08db7
+./.git/objects/0b/979c6830ef03b0c7123fb7adaae0c2661ad7ac
+./.git/objects/16/8cf28223948cb45c9b8def4c59b895de1b749f
+./.git/objects/f6/b130f9113ab244096ddb73acd76e9ab2e57cd6
+./.git/objects/ea/f871999518e5d95b470cd9e6bbd5d19934048c
+./.git/objects/77/ae2616b5ce35fa97b1ff6fcbcb96870d0a249d
+./.git/objects/61/d52be6651a9a94edd129fca8f8b491072d6671
+./.git/objects/37/a906fc68570f43f98cee5d222a8ac183abf873
+./.git/objects/1b/3513c8828f1a62c90c64b87b8823c6d1330377
+./.git/objects/45/cfd4fc8102d16655fefa894c5670741e53b3b2
+./.git/objects/45/d4db75e99d920df1a7da0b91a558ccd41a9e3f
+./.git/objects/5e/d76bf766de458e53a1fd8675d4780dc7427aa4
+./.git/objects/9b/293dae530533036c3aba4c4e645a8c08e9d4f5
+./.git/objects/02/36c62e32df628d2ffe7564d5fce4f6a72e15ba
+./.git/objects/b4/5ee99945027f21e1584203549c218146a7c648
+./.git/objects/de/9afddcc069758afa73fad00a2c8bc2a2a762fc
+./.git/objects/89/03814ee3e63705d5cd3346ffcaaa5ad94ff222
+./.git/objects/89/cf267a8c026e320949ac40520a2878287db090
+./.git/objects/d6/14c04803355d6252264537be6a9605d4b0a1ba
+./.git/objects/d6/e68d9d864cb8a98ad5429ea4a43eb2bc01d3ca
+./.git/objects/35/dc52694e9970496a92d859c5058b986a5348f8
+./.git/objects/8c/8e64dda1d7f2e69cf9d83bb98c92aeb2c94a26
+./.git/objects/8c/7fda7ff6484cafada6b7a4b0e8bf3596b2b355
+./.git/objects/72/33fac5a28ac7944380417f3f61408a734dc0ef
+./.git/objects/a2/7c46b1b58ecc281bafd8bbba513d88e9a96978
+./.git/objects/a2/de0ded5786bad16fc8da8da403e9c25f7d4a8a
+./.git/objects/88/e4639aacc1dbc1f199a36dfafe2ba45844df85
+./.git/objects/51/c66a05d7cefb005a354595cd3a9c07d52cd8fb
+./.git/objects/f1/306f2bf72a4dd55e4097a4671b065136a16dbf
+./.git/objects/c4/d00c6de21c597c216c74296236d96477c7dff0
+./.git/objects/9e/ecaa0e61518f0d65e50ae053422a007b6388c6
+./.git/objects/9e/ec4bca13a59213fdbad0a4f7a6fc0bbe2e1923
+./.git/objects/07/1c9861d705e22c7a648c2b4b29e56f032a43b5
+./.git/objects/d2/dfafd2d5cae84e9b9251e9e144ac62d0955d18
+./.git/objects/4a/6df906233197b8c2bf4aa7df91c3caed3f0333
+./.git/objects/7f/23d632d7a441004b1adaf44549b5a6b405e6ec
+./.git/objects/53/738505bb60d32e361e406c9715f270313ad170
+./.git/objects/53/371b98293228a9b9e3f9cbdb9bb2b199659215
+./.git/objects/a3/297631ef0e7677fbd0b34ba839accdf7c4a341
+./.git/objects/cf/400269bf8b10bcc26b790529f17bd43b8edf09
+./.git/objects/08/f5d3fb33bf226c9c644bcd0f9cf9e7dc501bc8
+./.git/objects/a8/501000b0a2ba32639f4a999bfb69221e6ce757
+./.git/objects/19/116fbf7100240751d449a53254d8df313ec3b6
+./.git/objects/f3/f8779b62288c129d233646633af6d8789a4a1d
+./.git/objects/5f/a803d83006fe6720e6095b0dcb6e03df54970b
+./.git/objects/f5/d9616777f95646324b1b1933914f24020c4139
+./.git/objects/60/16ddd8cbf5a0e0886dfb0e6c392e35559f9551
+./.git/objects/91/ef1a4e4737718a3f56243de443f807c50169a6
+./.git/objects/91/9dde41bdfa5bed0f70b93d915d510e2d142f23
+./.git/objects/03/4a78d00ffa36d633cbbea52f654afc6243ab62
+./.git/objects/03/cef3951459116f3de8192f1ef24dd5914c2f14
+./.git/objects/29/1a7506baf2a3d528c0662f69f8c8a1ac0fbfe8
+./.git/description
+./.git/FETCH_HEAD
+./.git/logs/HEAD
+./.git/logs/refs/heads/main
+./.git/logs/refs/remotes/origin/HEAD
+./.git/logs/refs/remotes/origin/dev
+./.git/logs/refs/remotes/origin/main
+./.git/logs/refs/stash
+./.git/refs/heads/main
+./.git/refs/remotes/origin/HEAD
+./.git/refs/remotes/origin/dev
+./.git/refs/remotes/origin/main
+./.git/refs/stash
+./.git/index
+./.git/hooks/pre-receive.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/push-to-checkout.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/update.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/ORIG_HEAD
+./.git/packed-refs
+./.sudo_as_admin_successful
+./.bash_history
+./.bashrc
+./.selected_editor
+./main_log.log
+./repo_commit_hash.txt
+./hashes/update_main.py.hash
+./hashes/main.py.hash
+./hashes/README.md.hash
+./hashes/setup_services.py.hash
+./hashes/wifi_sync.py.hash
+./hashes/wifi_list.json.hash
+./.lesshst
+
+2025-01-08 15:21:34,460 - INFO - Executing command: sudo find . -mindepth 1 -ignore_readdir_race ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -exec rm -rf {} +
+2025-01-08 15:21:34,518 - INFO - Command still running...
+2025-01-08 15:21:35,519 - INFO - Executing command: sudo systemctl restart main.service
+2025-01-08 15:21:35,544 - INFO - Command still running...
+2025-01-08 15:21:36,545 - INFO - Executing command: sudo systemctl restart update_main.service
+2025-01-08 15:21:36,572 - INFO - Command still running...
+2025-01-08 15:21:37,573 - INFO - Executing command: cat /etc/systemd/system/main.service
+2025-01-08 15:21:37,636 - INFO - Command still running...
+2025-01-08 15:21:38,637 - INFO - Output: [Unit]
+Description=Main Python Script Service
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/pkill -f /home/pi/main.py
+ExecStart=/usr/bin/python3 /home/pi/main.py
+WorkingDirectory=/home/pi
+StandardOutput=append:/home/pi/main_log.log
+StandardError=append:/home/pi/main_log.log
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+2025-01-08 15:21:38,638 - INFO - Executing command: cat /etc/systemd/system/wifi_sync.service
+2025-01-08 15:21:38,674 - INFO - Command still running...
+2025-01-08 15:21:39,675 - INFO - Output: 
+    [Unit]
+    Description=Run wifi_sync script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/wifi_sync.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:21:39,676 - INFO - Executing command: cat /etc/systemd/system/update_main.service
+2025-01-08 15:21:39,711 - INFO - Command still running...
+2025-01-08 15:21:40,712 - INFO - Output: 
+    [Unit]
+    Description=Run update_main script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/update_main.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:21:40,713 - INFO - Executing command: ls
+2025-01-08 15:21:40,746 - INFO - Command still running...
+2025-01-08 15:21:41,747 - INFO - Output: connection_string.txt  main.py		  update_main.py
+hashes		       README.md	  wifi_list.json
+main_log.log	       setup_services.py  wifi_sync.py
+
+2025-01-08 15:21:41,749 - INFO - Connecting to 2300000000de2c394511010-25.local...
+2025-01-08 15:21:46,778 - ERROR - Error with 2300000000de2c394511010-25.local: [Errno -2] Name or service not known
+2025-01-08 15:21:46,779 - INFO - Connecting to 2400000000a3c207c511010-54.local...
+2025-01-08 15:21:51,801 - ERROR - Error with 2400000000a3c207c511010-54.local: [Errno -2] Name or service not known
+2025-01-08 15:21:51,802 - INFO - Connecting to 250000000033d459f411010-39.local...
+2025-01-08 15:21:56,819 - ERROR - Error with 250000000033d459f411010-39.local: [Errno -2] Name or service not known
+2025-01-08 15:21:56,820 - INFO - Successfully updated devices: 03, 22
+2025-01-08 15:27:40,099 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:27:40,704 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:27:41,189 - INFO - Authentication (password) successful!
+2025-01-08 15:27:41,191 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:27:41,192 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:27:42,230 - INFO - Command still running...
+2025-01-08 15:27:43,231 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:27:43,263 - INFO - Command still running...
+2025-01-08 15:27:44,264 - INFO - Executing command: crontab -r
+2025-01-08 15:27:44,305 - INFO - Command still running...
+2025-01-08 15:27:45,306 - INFO - Output: no crontab for pi
+
+2025-01-08 15:27:45,307 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:27:45,336 - INFO - Command still running...
+2025-01-08 15:27:46,337 - INFO - Output: no crontab for root
+
+2025-01-08 15:27:46,338 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:27:46,372 - INFO - Command still running...
+2025-01-08 15:27:47,373 - INFO - Command still running...
+2025-01-08 15:27:48,374 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (4 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409)
+Receiving objects:  32% (451/1409)
+Receiving objects:  33% (465/1409)
+Receiving objects:  34% (480/1409)
+Receiving objects:  35% (494/1409)
+Receiving objects:  36% (508/1409)
+Receiving objects:  37% (522/1409)
+Receiving objects:  38% (536/1409)
+Receiving objects:  39% (550/1409)
+Receiving objects:  40% (564/1409)
+Receiving objects:  41% (578/1409)
+Receiving objects:  42% (592/1409)
+Receiving objects:  43% (606/1409)
+Receiving objects:  44% (620/1409)
+Receiving objects:  45% (635/1409)
+Receiving objects:  46% (649/1409)
+Receiving objects:  47% (663/1409)
+Receiving objects:  48% (677/1409)
+Receiving objects:  49% (691/1409)
+Receiving objects:  50% (705/1409)
+Receiving objects:  51% (719/1409)
+Receiving objects:  52% (733/1409)
+Receiving objects:  53% (747/1409)
+Receiving objects:  54% (761/1409)
+Receiving objects:  55% (775/1409)
+Receiving objects:  56% (790/1409)
+Receiving objects:  57% (804/1409)
+Receiving objects:  58% (818/1409)
+Receiving objects:  59% (832/1409)
+Receiving objects:  60% (846/1409)
+Receiving objects:  61% (860/1409)
+Receiving objects:  62% (874/1409)
+Receiving objects:  63% (888/1409)
+Receiving objects:  64% (902/1409)
+Receiving objects:  65% (916/1409)
+Receiving objects:  66% (930/1409)
+Receiving objects:  67% (945/1409)
+Receiving objects:  68% (959/1409)
+Receiving objects:  69% (973/1409)
+Receiving objects:  70% (987/1409)
+Receiving objects:  71% (1001/1409)
+Receiving objects:  72% (1015/1409)
+Receiving objects:  73% (1029/1409)
+Receiving objects:  74% (1043/1409)
+Receiving objects:  75% (1057/1409)
+Receiving objects:  76% (1071/1409)
+Receiving objects:  77% (1085/1409)
+Receiving objects:  78% (1100/1409)
+Receiving objects:  79% (1114/1409)
+Receiving objects:  80% (1128/1409)
+Receiving objects:  81% (1142/1409)
+Receiving objects:  82% (1156/1409)
+Receiving objects:  83% (1170/1409)
+Receiving objects:  84% (1184/1409)
+Receiving objects:  85% (1198/1409)
+Receiving objects:  86% (1212/1409)
+Receiving objects:  87% (1226/1409)
+Receiving objects:  88% (1240/1409)
+Receiving objects:  89% (1255/1409)
+Receiving objects:  90% (1269/1409)
+Receiving objects:  91% (1283/1409)
+Receiving objects:  92% (1297/1409)
+Receiving objects:  93% (1311/1409)
+Receiving objects:  94% (1325/1409)
+Receiving objects:  95% (1339/1409)
+Receiving objects:  96% (1353/1409)
+Receiving objects:  97% (1367/1409)
+Receiving objects:  98% (1381/1409)
+Receiving objects:  99% (1395/1409)
+Receiving objects: 100% (1409/1409)
+Receiving objects: 100% (1409/1409), 1.59 MiB | 3.64 MiB/s, done.
+
+2025-01-08 15:27:48,375 - INFO - Executing command: ls
+2025-01-08 15:27:48,406 - INFO - Command still running...
+2025-01-08 15:27:49,407 - INFO - Output: connection_string.txt  New-Device-set-up-and-management  wifi_list.json
+hashes		       README.md			 wifi_sync.py
+main_log.log	       setup_services.py
+main.py		       update_main.py
+
+2025-01-08 15:27:49,408 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:27:49,433 - INFO - Command still running...
+2025-01-08 15:27:50,434 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:27:50,462 - INFO - Command still running...
+2025-01-08 15:27:51,463 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:27:51,493 - INFO - Command still running...
+2025-01-08 15:27:52,494 - INFO - Output: ./.sudo_as_admin_successful
+./main_log.log
+./hashes/update_main.py.hash
+./hashes/main.py.hash
+./hashes/README.md.hash
+./hashes/setup_services.py.hash
+./hashes/wifi_sync.py.hash
+./hashes/wifi_list.json.hash
+
+2025-01-08 15:27:52,495 - INFO - Executing command: sudo find . -mindepth 1 -ignore_readdir_race ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -exec rm -rf {} +
+2025-01-08 15:27:52,636 - INFO - Command still running...
+2025-01-08 15:27:53,637 - INFO - Executing command: sudo systemctl restart main.service
+2025-01-08 15:27:53,665 - INFO - Command still running...
+2025-01-08 15:27:54,666 - INFO - Executing command: sudo systemctl restart update_main.service
+2025-01-08 15:27:54,695 - INFO - Command still running...
+2025-01-08 15:27:55,696 - INFO - Executing command: cat /etc/systemd/system/main.service
+2025-01-08 15:27:55,743 - INFO - Command still running...
+2025-01-08 15:27:56,744 - INFO - Output: [Unit]
+Description=Main Python Script Service
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/pkill -f /home/pi/main.py
+ExecStart=/usr/bin/python3 /home/pi/main.py
+WorkingDirectory=/home/pi
+StandardOutput=append:/home/pi/main_log.log
+StandardError=append:/home/pi/main_log.log
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+2025-01-08 15:27:56,745 - INFO - Executing command: cat /etc/systemd/system/wifi_sync.service
+2025-01-08 15:27:56,782 - INFO - Command still running...
+2025-01-08 15:27:57,783 - INFO - Output: 
+    [Unit]
+    Description=Run wifi_sync script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/wifi_sync.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:27:57,784 - INFO - Executing command: cat /etc/systemd/system/update_main.service
+2025-01-08 15:27:57,816 - INFO - Command still running...
+2025-01-08 15:27:58,817 - INFO - Output: 
+    [Unit]
+    Description=Run update_main script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/update_main.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:27:58,819 - INFO - Executing command: ls
+2025-01-08 15:27:58,862 - INFO - Command still running...
+2025-01-08 15:27:59,863 - INFO - Output: connection_string.txt  main.py		  update_main.py
+hashes		       README.md	  wifi_list.json
+main_log.log	       setup_services.py  wifi_sync.py
+
+2025-01-08 15:27:59,864 - INFO - Successfully updated devices: 03
+2025-01-08 15:27:59,878 - ERROR - Error during Git operations: Command 'git clone https://Golul-Madhu:[REMOVED_PAT]@github.com/Golul-Madhu/raspberry-pi-audio_test.git' returned non-zero exit status 128.
+2025-01-08 15:30:46,983 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:30:47,479 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:30:47,967 - INFO - Authentication (password) successful!
+2025-01-08 15:30:47,968 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:30:47,969 - INFO - Executing command: sudo rm -rf data
+2025-01-08 15:30:48,936 - INFO - Command still running...
+2025-01-08 15:30:49,937 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:30:49,965 - INFO - Command still running...
+2025-01-08 15:30:50,966 - INFO - Executing command: crontab -r
+2025-01-08 15:30:50,990 - INFO - Command still running...
+2025-01-08 15:30:51,992 - INFO - Output: no crontab for pi
+
+2025-01-08 15:30:51,993 - INFO - Executing command: sudo crontab -r
+2025-01-08 15:30:52,022 - INFO - Command still running...
+2025-01-08 15:30:53,023 - INFO - Output: no crontab for root
+
+2025-01-08 15:30:53,025 - INFO - Executing command: git clone https://gmadhu:AQEcVnPJVP74JMigTKFKPLFaThxVsZqeGQWhAHNWirkFhcljIw92JQQJ99ALACAAAAAtklN2AAASAZDOxosj@dev.azure.com/vratislaviasoft/Presage/_git/New-Device-set-up-and-management
+2025-01-08 15:30:53,058 - INFO - Command still running...
+2025-01-08 15:30:54,059 - INFO - Command still running...
+2025-01-08 15:30:55,060 - INFO - Output: Cloning into 'New-Device-set-up-and-management'...
+remote: Azure Repos[K
+remote: 
+remote: Found 1409 objects to send. (89 ms)[K
+Receiving objects:   0% (1/1409)
+Receiving objects:   1% (15/1409)
+Receiving objects:   2% (29/1409)
+Receiving objects:   3% (43/1409)
+Receiving objects:   4% (57/1409)
+Receiving objects:   5% (71/1409)
+Receiving objects:   6% (85/1409)
+Receiving objects:   7% (99/1409)
+Receiving objects:   8% (113/1409)
+Receiving objects:   9% (127/1409)
+Receiving objects:  10% (141/1409)
+Receiving objects:  11% (155/1409)
+Receiving objects:  12% (170/1409)
+Receiving objects:  13% (184/1409)
+Receiving objects:  14% (198/1409)
+Receiving objects:  15% (212/1409)
+Receiving objects:  16% (226/1409)
+Receiving objects:  17% (240/1409)
+Receiving objects:  18% (254/1409)
+Receiving objects:  19% (268/1409)
+Receiving objects:  20% (282/1409)
+Receiving objects:  21% (296/1409)
+Receiving objects:  22% (310/1409)
+Receiving objects:  23% (325/1409)
+Receiving objects:  24% (339/1409)
+Receiving objects:  25% (353/1409)
+Receiving objects:  26% (367/1409)
+Receiving objects:  27% (381/1409)
+Receiving objects:  28% (395/1409)
+Receiving objects:  29% (409/1409)
+Receiving objects:  30% (423/1409)
+Receiving objects:  31% (437/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  32% (451/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  33% (465/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  34% (480/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  35% (494/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  36% (508/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  37% (522/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  38% (536/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  39% (550/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  40% (564/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  41% (578/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  42% (592/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  43% (606/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  44% (620/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  45% (635/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  46% (649/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  47% (663/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  48% (677/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  49% (691/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  50% (705/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  51% (719/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  52% (733/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  53% (747/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  54% (761/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  55% (775/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  56% (790/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  57% (804/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  58% (818/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  59% (832/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  60% (846/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  61% (860/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  62% (874/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  63% (888/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  64% (902/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  65% (916/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  66% (930/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  67% (945/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  68% (959/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  69% (973/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  70% (987/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  71% (1001/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  72% (1015/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  73% (1029/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  74% (1043/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  75% (1057/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  76% (1071/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  77% (1085/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  78% (1100/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  79% (1114/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  80% (1128/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  81% (1142/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  82% (1156/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  83% (1170/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  84% (1184/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  85% (1198/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  86% (1212/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  87% (1226/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  88% (1240/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  89% (1255/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  90% (1269/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  91% (1283/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  92% (1297/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  93% (1311/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  94% (1325/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  95% (1339/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  96% (1353/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  97% (1367/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  98% (1381/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects:  99% (1395/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects: 100% (1409/1409), 555.88 KiB | 1.08 MiB/s
+Receiving objects: 100% (1409/1409), 1.59 MiB | 2.21 MiB/s, done.
+
+2025-01-08 15:30:55,062 - INFO - Executing command: ls
+2025-01-08 15:30:55,133 - INFO - Command still running...
+2025-01-08 15:30:56,134 - INFO - Output: connection_string.txt  New-Device-set-up-and-management  wifi_list.json
+hashes		       README.md			 wifi_sync.py
+main_log.log	       setup_services.py
+main.py		       update_main.py
+
+2025-01-08 15:30:56,135 - INFO - Executing command: mv ~/New-Device-set-up-and-management/* /home/pi/
+2025-01-08 15:30:56,168 - INFO - Command still running...
+2025-01-08 15:30:57,169 - INFO - Executing command: sudo rm -rf New-Device-set-up-and-management/
+2025-01-08 15:30:57,199 - INFO - Command still running...
+2025-01-08 15:30:58,200 - INFO - Executing command: find . -type f ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -print
+2025-01-08 15:30:58,231 - INFO - Command still running...
+2025-01-08 15:30:59,232 - INFO - Output: ./.sudo_as_admin_successful
+./main_log.log
+./hashes/update_main.py.hash
+./hashes/main.py.hash
+./hashes/README.md.hash
+./hashes/setup_services.py.hash
+./hashes/wifi_sync.py.hash
+./hashes/wifi_list.json.hash
+
+2025-01-08 15:30:59,233 - INFO - Executing command: sudo find . -mindepth 1 -ignore_readdir_race ! -name "main.py" ! -name "README.md" ! -name "setup_services.py" ! -name "update_main.py" ! -name "wifi_list.json" ! -name "wifi_sync.py" ! -name "connection_string.txt" ! -path './data/*' -exec rm -rf {} +
+2025-01-08 15:30:59,284 - INFO - Command still running...
+2025-01-08 15:31:00,285 - INFO - Executing command: sudo systemctl restart main.service
+2025-01-08 15:31:00,328 - INFO - Command still running...
+2025-01-08 15:31:01,329 - INFO - Executing command: sudo systemctl restart update_main.service
+2025-01-08 15:31:01,358 - INFO - Command still running...
+2025-01-08 15:31:02,359 - INFO - Executing command: cat /etc/systemd/system/main.service
+2025-01-08 15:31:02,386 - INFO - Command still running...
+2025-01-08 15:31:03,387 - INFO - Output: [Unit]
+Description=Main Python Script Service
+After=network.target
+
+[Service]
+ExecStartPre=-/usr/bin/pkill -f /home/pi/main.py
+ExecStart=/usr/bin/python3 /home/pi/main.py
+WorkingDirectory=/home/pi
+StandardOutput=append:/home/pi/main_log.log
+StandardError=append:/home/pi/main_log.log
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+2025-01-08 15:31:03,388 - INFO - Executing command: cat /etc/systemd/system/wifi_sync.service
+2025-01-08 15:31:03,425 - INFO - Command still running...
+2025-01-08 15:31:04,426 - INFO - Output: 
+    [Unit]
+    Description=Run wifi_sync script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/wifi_sync.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:31:04,428 - INFO - Executing command: cat /etc/systemd/system/update_main.service
+2025-01-08 15:31:04,468 - INFO - Command still running...
+2025-01-08 15:31:05,470 - INFO - Output: 
+    [Unit]
+    Description=Run update_main script
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/bin/python3 /home/pi/update_main.py
+    WorkingDirectory=/home/pi
+    Restart=always
+    User=pi
+    Group=pi
+    Environment=PATH=/usr/bin:/usr/local/bin
+    Environment=PYTHONUNBUFFERED=1
+    RestartSec=5m
+
+    [Install]
+    WantedBy=multi-user.target
+    
+2025-01-08 15:31:05,471 - INFO - Executing command: ls
+2025-01-08 15:31:05,505 - INFO - Command still running...
+2025-01-08 15:31:06,506 - INFO - Output: connection_string.txt  main.py		  update_main.py
+hashes		       README.md	  wifi_list.json
+main_log.log	       setup_services.py  wifi_sync.py
+
+2025-01-08 15:31:06,508 - INFO - Successfully updated devices: 03
+2025-01-08 15:31:06,509 - INFO - Removing existing directory: raspberry-pi-audio_test
+2025-01-08 15:31:07,592 - INFO - GitHub repository cloned successfully.
+2025-01-08 15:31:07,620 - ERROR - Error during Git operations: Command 'git add device_log.txt' returned non-zero exit status 128.
+2025-01-08 15:31:25,610 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:31:26,196 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:31:26,664 - INFO - Authentication (password) successful!
+2025-01-08 15:31:26,665 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:31:26,666 - INFO - Executing command: ls
+2025-01-08 15:31:27,669 - INFO - Command still running...
+2025-01-08 15:31:28,671 - INFO - Output: connection_string.txt  main_log.log  setup_services.py	wifi_sync.py
+data		       main.py	     update_main.py
+hashes		       README.md     wifi_list.json
+
+2025-01-08 15:31:28,673 - INFO - Successfully updated devices: 03
+2025-01-08 15:31:28,674 - INFO - Removing existing directory: raspberry-pi-audio_test
+2025-01-08 15:31:29,734 - INFO - GitHub repository cloned successfully.
+2025-01-08 15:31:29,762 - ERROR - Error during Git operations: Command 'git add device_log.txt' returned non-zero exit status 128.
+2025-01-08 15:33:00,827 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:33:00,978 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:33:01,456 - INFO - Authentication (password) successful!
+2025-01-08 15:33:01,457 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:33:01,457 - INFO - Executing command: ls
+2025-01-08 15:33:01,766 - INFO - Command still running...
+2025-01-08 15:33:02,767 - INFO - Output: connection_string.txt  main_log.log  setup_services.py	wifi_sync.py
+data		       main.py	     update_main.py
+hashes		       README.md     wifi_list.json
+
+2025-01-08 15:33:02,769 - INFO - Successfully updated devices: 03
+2025-01-08 15:33:02,769 - INFO - Removing existing directory: raspberry-pi-audio_test
+2025-01-08 15:33:03,896 - INFO - GitHub repository cloned successfully.
+2025-01-08 15:33:03,898 - INFO - Log file copied to the repository directory.
+2025-01-08 15:33:05,463 - ERROR - Error during Git operations: Command 'git push https://Golul-Madhu:[REMOVED_PAT]@github.com/Golul-Madhu/raspberry-pi-audio_test.git' returned non-zero exit status 1.
+2025-01-08 15:36:40,378 - INFO - Connecting to 03000000007fe7341611010-40.local...
+2025-01-08 15:36:40,990 - INFO - Connected (version 2.0, client OpenSSH_9.2p1)
+2025-01-08 15:36:41,472 - INFO - Authentication (password) successful!
+2025-01-08 15:36:41,473 - INFO - Connection successful to 03000000007fe7341611010-40.local.
+2025-01-08 15:36:41,474 - INFO - Executing command: ls
+2025-01-08 15:36:42,515 - INFO - Command still running...
+2025-01-08 15:36:43,516 - INFO - Output: connection_string.txt  main_log.log  setup_services.py	wifi_sync.py
+data		       main.py	     update_main.py
+hashes		       README.md     wifi_list.json
+
+2025-01-08 15:36:43,518 - INFO - Successfully updated devices: 03
+2025-01-08 15:36:43,519 - INFO - Removing existing directory: raspberry-pi-audio_test
+2025-01-08 15:36:44,594 - INFO - GitHub repository cloned successfully.
